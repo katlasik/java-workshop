@@ -20,25 +20,18 @@ storzy listę zawierającą elementy każdej z nich na zmianę:
 
 4. Stwórz metodę `boolean allNegative(List<Integer> elements)` zwracającą **true** tylko jeżeli wszystkie elementy listy są ujemne.
 
-5. Stwórz metodę `distinct` przyjmującą jako argument listę intóœ. Metoda ta powinna zwrócić listę intów, ale ominąć powtarzające się elementy:
+5. Stwórz metodę `distinct` przyjmującą jako argument listę intów. Metoda ta powinna zwrócić listę intów, ale ominąć powtarzające się elementy:
 
 `[1,2,3,3] -> [1,2,3]`
 
 `[4,4,4] -> [4]`
 
-6. Stwórz metodę `unique` przyjmującą jako argument string. Metoda ta powinna zwrócić również string ale powinna
-pomijać wszystkie wystepujące już znaki. Na przykład:
+Funkcja powinna zachowywać kolejność liczb.
 
-`abcabcd` -> `abcd`
+6. Stwórz metodę, `int[] swap(int[] array, int from, int to)`, która zamienia miejscami dwie liczby o indeksach
+wskazanych przez `from` i `to`. Stwórz przeładowaną wersję dla listy.
 
-`aaaaaax` -> `ax`
-
-Funkcja powinna zachowywać kolejność znaków.
-
-7. Stwórz metodę, `int find(int[] array, int value)` która wykonuje binarne wyszukiwanie z posortowanej tablicy i zwraca pozycję wartości.
-Stwórz przeładowaną wersję dla listy.
-
-8. Stwórz metodę `showHistogram(String input)`, która będzie otrzymywać łańcuch tekstowy i będzie wyświetlać
+7. Stwórz metodę `showHistogram(String input)`, która będzie otrzymywać łańcuch tekstowy i będzie wyświetlać
 wszystkie znaki oraz ile razy występuję. Na przykład `showHistogram("aaabbbc")` powienien zwrócić:
 
 ```
@@ -49,15 +42,35 @@ Wyniki posortuj według liczy wyświetleń, a potem alfabetycznie.
 
 (Dodatkowo) obok liczby występowań wyświetl w nawiasie procentową wartość udziału znaku w łańcuchu.
 
-9. Stwórz metodę sprawdzającą czy słowo jest palindromem:
-
-`kajak` -> true
-
-10. **(trudne)** Zaimplementuj [sito Erastotenesa](http://rasmus.is/pl/T/u/st23k01.htm). Metoda otrzymawszy liczbę powinna znaleźc wszystkie liczbny pierwsze
+8. **(trudne)** Zaimplementuj [sito Erastotenesa](http://rasmus.is/pl/T/u/st23k01.htm). Metoda otrzymawszy liczbę powinna znaleźc wszystkie liczbny pierwsze
 mniejsze od niej.
 
-11. **(trudne)** Zaimplementuj algorymt sortowanie bąbęlkowego.
+9. **(trudne)** Zaimplementuj algorytm sortowanie bąbęlkowego.
 
+### String
+
+1. Stwórz metodę `isPalindrome` sprawdzającą czy słowo jest palindromem:
+
+`kajak` -> true
+`kaja` -> false
+
+2. Stwórz metodę `unique` przyjmującą jako argument string. Metoda ta powinna zwrócić również string ale powinna
+pomijać wszystkie wystepujące już znaki. Na przykład:
+
+`abcabcd` -> `abcd`
+
+`aaaaaax` -> `ax`
+
+3. Napisz program w klasie `ReadWords` wczytujący linie tekstu ze standardowego wejścia do listy aż do wpisania słowa *"koniec"*. Następnie program powinien wyświetlić je podzielone przecinkami pomijajac `koniec`. Na przykład: `Wczytano 3 słowa: Jaś, piłka, słowo.`. 
+Rozważ użycie metod `String.join` i `String.format`.
+
+4. Stwórz metodę `repeatUntil`, która będzie powtarzać dany string, aż jego długość przekroczy wartość progową.
+   Na przykład, dla *"raz"* i *13*:
+   
+     1 iteracja: size("raz") < 13 -> "razraz"
+     2 iteracja: size("razraz") <  13 -> "razrazrazraz"
+     3 iteracja: size("razrazrazraz") < 13 -> "razrazrazrazrazrazrazraz"
+     4 iteracja size("razrazrazrazrazrazrazraz") > 13 -> koniec
 
 ### Programowanie obiektowe
 
@@ -114,7 +127,15 @@ mniejsze od niej.
    a jeżeli *"morse"*, to `MorseNumberConverter`. Jeżeli zostanie podany inny string, to
    powinna zostać zwrócona implementacja `NumberConverter`, która zwraca string wejściowy `("test" -> "test")`.
    
-6. Stwórz klasę 
+6. * Stwórz metodę `modifyUpperCase`, która będzie otrzymywać listę stringów oraz liczbę (indeks elementu). Gdy indeks nie będzie wskazywał na żaden element rzuć `IllegalArgumentException`. W przypadku gdy zostanie podany poprawny indeks to zmień wszystkie znaki we wskazanym stringu na wielkie litery, a resztę pozostaw niezmienioną. Na przykład:
+   `["aaa", "bbb", "ccc", "ddd"]` oraz `2` ->  `["aaa", "bbb", "CCC", "ddd"]`
+
+   * Stwórz analogiczną metody `modifyRepeat`, która powiela string dwukrotnie.
+   `["aaa", "bbb", "ccc", "ddd"]` oraz `2` ->  `["aaa", "bbb", "cccccc", "ddd"]`
+   
+   * Zastanów się, czy za pomocą interfejsów można stworzyć ogólną wersję metody `modify`.
+
+   * Zastanów się, czy nie można zmienić metody `modify`, tak by można było wyszukiwać stringa, nie tylko po indeksie.
 
 ### Varargs
 
@@ -138,36 +159,47 @@ mniejsze od niej.
 
    `[1,2,3,4,5] ~> 1`
    
-2. Stwórz grę, która będzie losowała wartość od 1 do 100, następnie będzie prosiła użytkownika o podanie liczby.
+2. **(trudne)** Stwórz grę, która będzie losowała wartość od 1 do 100, następnie będzie prosiła użytkownika o podanie liczby.
 W przypadku gdy użytkownik trafi, to gra informuje go o zwycięstwie, a jeżeli nie trafi, to informuje go czy 
 liczba jest zbyt mała lub zbyt duża.
 
+### Data i czas
+
+1. Napisz funkcję, która po otrzymaniu roku i miesiąca zwróci listę wszystkich dni danego miesiąca.
+2. Napisz funkcję `isAlmostTime` zwracającą true, jeżeli obecny czas jest z zakresie +/- 5 minut od podanego
+   w parametrze.
+3.  * Napisz funkcję, która zwraca liczbę dni do następnych urodzin podanych jako parametr.
+
 ### Klasy generyczne
 
-1. Stwórz klasę `Pair<X,Y>` przechowującą dwie wartości.
-
+1. * Stwórz klasę `Pair<X,Y>` przechowującą dwie wartości.
+   * Dodaj metody `Pair<X,Y> add(Pair<X,Y> p)` i `Pair<X,Y> substract(Pair<X,Y> p)`, które
+   tworzą nowy obiekt `Pair` dodając/odejmując od siebie wartości x oraz y punktów.
+   
 2. Stwórz klasę `RandomList<X>`, która ma następujące API, która ma dwie metody `add(X element)` oraz `X getRandom()`.
 Po dodaniu elementu
 
-3. Zmodyfikuj metodę `pickRandom` tak, by działała na dowolnych wartościach.
+3. Zmodyfikuj metodę `pickRandom`, `intercalate`, `intersperse` tak, by działała na dowolnych typach.
 
 ### Wyjątki
 
 1. Napisz metodę `checkNull` rzucającą wyjątek `NullPointerException`, gdy argument jest równy **null**.
-2. Napisz metodę parsująca liczbę ze stringa.  W przypadku nieudanej konwersji rzuć wyjątek `IllegalArgumentException`
+2. Napisz metodę `safeParse` parsująca liczbę ze łańcucha znaków, używajac `Integer.parse`. W przypadku nieudanej konwersji rzuć wyjątek `IllegalArgumentException`
 zawierający stary wyjątek oraz wiadomość "Nieprawidłowa liczba".
 3. Napisz własny wyjątek `OddSizeException`. Napisz metodę `checkList` wyrzucającą go,
-jeżeli liczba elementów jest nieparzysta.
-4. Stwórz aplikację bezpiecznie wczytującą liczby i dodającą je listy a następnie wyświetlająca je.
+jeżeli liczba elementów jest nieparzysta. Podczas rzucania wyjątku napisz informację, dlaczego został rzucony.
+4. Stwórz kalkulator bezpiecznie wczytujący liczby i dodającą je listy.
+ Po wpisaniu przez użytkownika `=` program powinien wyświetlić liczby oraz sumę.
 
    * Jeżeli liczba jest poprawna, np. *123* to powinna zostać dodana do listy.
    * Jeżeli liczba jest niepoprawna, to wyjątek *InputMismatchException* powinien zostać przechwycony i 
-     powienien zostać wyświetlony komunikat "Niepoprawna liczba".
+     powienien zostać wyświetlony komunikat "Niepoprawna liczba!". Podanie niepoprawnej liczby nie powinno 
+     kończyć działania programu.
 
 
 ### Typy wyliczeniowe
 
-1. * Stwórz typ wyliczeniowy `Color`.
+1. * Stwórz typ wyliczeniowy `pl.sda.enums.Color`.
    * Dodaj kolory, takie jak `Black`, `Red`, `Yellow`.
    * Dodaj do niego metode `getHex` zwracającą heksadecymalną reprezentację koloru.
 
@@ -184,6 +216,18 @@ jeżeli liczba elementów jest nieparzysta.
       * *8-15* jeżeli jest to normalny dzień
       * *8-17* jeżeli jest to dzień z rozszerzonymi godzinami pracy
       * *zamknięte* jeżeli jest to weekend.
+      
+### Pliki
+
+1. Wczytaj plik wpisujący obecną datę i godzinę do pliku `time`. Kolejne uruchomienia programu
+powinny pozostawiać starą zawartość, a tylko dodawać nową linię na końcu pliku.
+
+2. Napisz program, który wczytuje wszystkie linie z pliku `linie`, następnie 
+nadpisuje go wpisując linie w odwrotnej kolejności.
+
+3. Wczytaj plik `osoby` zawierający numery PESEL i nazwiska oraz imiona, podzielone znakiem **|**, a następnie `adresy`
+zawierający numery PESEl i adresy zamieszkania podzielone znakiem **|**. Połącz dane z obydwóch plików i wyświetl dla wszystich osób
+dane w formacie *PESEL, imię, nazwisko, adres*. Jeżeli dla danej osoby nie istnieje linia w pliku `adresy.txt` to wyświetl *???*. 
 
 ### Wątki
 
@@ -193,7 +237,3 @@ w głownym wątku wyświetljącą `Witaj z głownego wątku!` co 20 sekund.
 2. Stwórz klasę dziedziczącą po `Runnable`, która jako parametr otrzyma liczbę. Zadaniem obieku tej
 klasy będzie wyświetlenie liczby razem z z nazwą watku, a następnie odczekanie 1 sekundy i zmniejszenie wartości
 o 1, a natępnie powtórzenie operacji aż do osiągnięcia 0. Innymi słowy należe odliczyć od n do 0.
-
-### Optional
-
-1. Stwórz metodę  

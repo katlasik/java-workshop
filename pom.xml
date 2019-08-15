@@ -13,6 +13,16 @@
         <module>collections</module>
         <module>teachers</module>
         <module>io</module>
+        <module>strings</module>
+        <module>classes</module>
+        <module>threads</module>
+        <module>files</module>
+        <module>random</module>
+        <module>dates</module>
+        <module>exceptions</module>
+        <module>varargs</module>
+        <module>generics</module>
+        <module>enums</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -25,8 +35,8 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
+                    <source>1.10</source>
+                    <target>1.10</target>
                 </configuration>
             </plugin>
         </plugins>
