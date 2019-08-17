@@ -1,3 +1,10 @@
+## Instalacja
+
+1. Otwieramy `File` > `New` > `Project from Version Control` > `Git`.
+2. Wklejamy adres `git@github.com:katlasik/java-workshop.git`.
+3. Po otwarciu projektu klikamy `Add as Maven Project` w prawy dolnym rogu.
+4. Jeżeli pojawi się komunikat `Project's SDK is not defined` to wybieramy wersję Javy.
+
 ## Zadania
 
 ### Kolekcje
