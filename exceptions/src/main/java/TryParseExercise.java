@@ -5,11 +5,7 @@ public class TryParseExercise {
      * zawierający stary wyjątek oraz wiadomość "Nieprawidłowa liczba".
      */
     static Integer tryParse(String input) {
-        try {
-            return Integer.parseInt(input);
-        } catch(NumberFormatException e) {
-            throw new IllegalArgumentException("Nieprawidłowa liczba", e);
-        }
+        return 0;
     }
 
 }

@@ -14,46 +14,6 @@ public class SafeCalculator {
      */
     public static void main(String[] args) {
 
-        Scanner scanner = new Scanner(System.in);
-
-        ArrayList<Integer> numbers = new ArrayList<>();
-
-        while (true) {
-            String line = scanner.next();
-
-            if (line.equals("=")) {
-                System.out.println("Suma liczb "+ gather(numbers) + " to: " + sum(numbers));
-                break;
-            } else {
-                try {
-                    int i = Integer.parseInt(line);
-                    numbers.add(i);
-                } catch (NumberFormatException e) {
-                    System.err.println("Nieprawidłowa liczba");
-                }
-            }
-        }
-
-
-    }
-
-    private static String gather(ArrayList<Integer> numbers) {
-        String result = "";
-        for (int i = 0; i < numbers.size(); i++) {
-            result += numbers.get(i);
-            if(i < numbers.size() - 1) {//dodaj przecinek zawsze, oprócz ostatniego razu
-                result += ",";
-            }
-        }
-        return result;
-    }
-
-    public static int sum(ArrayList<Integer> numbers) {
-        int sum = 0;
-        for (int n : numbers) {
-            sum += n;
-        }
-        return sum;
     }
 
 }
