@@ -174,10 +174,11 @@ liczba jest zbyt mała lub zbyt duża.
 
 ### Data i czas
 
+1. Napisz fukcję wyświetlającą godzinię na przykład `10:10:15` co 10 sekund.
 1. Napisz funkcję, która po otrzymaniu roku i miesiąca zwróci listę wszystkich dni danego miesiąca.
 2. Napisz funkcję `isAlmostTime` zwracającą true, jeżeli obecny czas jest z zakresie +/- 5 minut od podanego
    w parametrze.
-3.  * Napisz funkcję, która zwraca liczbę dni do następnych urodzin podanych jako parametr.
+3. Napisz funkcję, która zwraca liczbę dni do następnych urodzin podanych jako parametr.
 
 ### Klasy generyczne
 
