@@ -10,25 +10,11 @@ import java.util.List;
  */
 public class Filter {
 
-    private final int to;
-    private final int from;
-
     public Filter(int from, int to) {
-      this.from = from;
-      this.to = to;
-  }
+    }
 
-  List<Integer> filter(List<Integer> list) {
-     ArrayList<Integer> result =new ArrayList<>();
-
-     for(int i: list) {
-         if(i >= from && i <= to) {
-             result.add(i);
-         }
-     }
-
-     return result;
-
-  }
+    List<Integer> filter(List<Integer> list) {
+        return null;
+    }
 
 }

@@ -6,36 +6,36 @@ public class MyNumber {
 
   private final int value;
 
-  public MyNumber(int i) {
-      this.value = i;
+  public MyNumber(int value) {
+      this.value = value;
   }
 
   public int value() {
-    return value;
+    return 0;
   }
 
   public boolean isOdd() {
-    return value % 2 != 0;
+    return false;
   }
 
   public boolean isEven() {
-    return !isOdd();
+    return false;
   }
 
   public MyNumber sqrt() {
-    return new MyNumber((int) Math.sqrt(value));
+    return null;
   }
 
   public MyNumber pow(MyNumber x) {
-    return new MyNumber((int) Math.pow(value, x.value));
+    return null;
   }
 
   public MyNumber add(MyNumber x) {
-    return new MyNumber(value + x.value);
+    return null;
   }
 
   public MyNumber subtract(MyNumber x) {
-    return new MyNumber(value - x.value);
+    return null;
   }
 
   @Override
