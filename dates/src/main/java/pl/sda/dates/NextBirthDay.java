@@ -9,15 +9,7 @@ import java.time.temporal.ChronoUnit;
 public class NextBirthDay {
 
     static int nextBirthDay(LocalDate birthday) {
-        LocalDate now = LocalDate.now();
-        LocalDate nextAnniversary = LocalDate.of(now.getYear(), birthday.getMonth(), birthday.getDayOfMonth());
-
-        if(nextAnniversary.isBefore(now)) { //jeżeli  urodziny już minęły w tym roku, musimy dodać 1 rok
-            nextAnniversary = nextAnniversary.plusYears(1);
-        }
-
-        return (int) ChronoUnit.DAYS.between(now, nextAnniversary);
-
+       return 0;
     }
 
     public static void main(String[] args) {

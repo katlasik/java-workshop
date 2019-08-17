@@ -14,22 +14,14 @@ import java.util.List;
  * new pl.sda.classes.FilterAndMultiply(3,4,5)
  * [1,2,3,5,10] -> [15,25]
  */
-public class FilterAndMultiply extends Filter {
+public class FilterAndMultiply {
 
-    private final int times;
 
     public FilterAndMultiply(int from, int to, int times) {
-        super(from, to);
-        this.times = times;
     }
 
     List<Integer> filterAndMultiply(List<Integer> list) {
-        List<Integer> result = new ArrayList<>();
-        List<Integer> filtered = super.filter(list);
-        for (int i : filtered) {
-            result.add(i * times);
-        }
-        return result;
+        return null;
     }
 
 }

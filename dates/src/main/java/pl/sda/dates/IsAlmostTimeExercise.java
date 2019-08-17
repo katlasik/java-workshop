@@ -10,10 +10,7 @@ import java.time.temporal.ChronoUnit;
 public class IsAlmostTimeExercise {
 
     static boolean isAlmostTime(LocalTime time) {
-        LocalTime now = LocalTime.now();
-
-        return now.isAfter(time.minus(5, ChronoUnit.MINUTES)) &&
-                now.isBefore(time.plus(5, ChronoUnit.MINUTES));
+        return false;
 
     }
 

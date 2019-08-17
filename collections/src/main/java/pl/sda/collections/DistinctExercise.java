@@ -15,8 +15,7 @@ public class DistinctExercise {
    */
 
   public static List<Integer> distinct(List<Integer> input) {
-    Set<Integer> set = new HashSet<>(input);
-    return new ArrayList<>(set);
+    return null;
   }
 
 }

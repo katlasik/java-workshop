@@ -16,13 +16,6 @@ public class WriteTimeExercise {
 
     public static void main(String[] args) throws IOException {
 
-        Path path = Paths.get("files/src/main/resources/time");
-
-        if(!Files.exists(path)) {
-            Files.createFile(path);
-        }
-
-        Files.write(path, List.of(LocalTime.now().toString()), StandardOpenOption.APPEND);
     }
 
 }
