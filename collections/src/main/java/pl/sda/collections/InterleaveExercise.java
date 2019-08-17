@@ -13,13 +13,7 @@ public class InterleaveExercise {
      * a: [1,2,3], b: [5,6,7] -> [1,5,2,6,3,7]
      */
     public static List<Integer> interleave(List<Integer> a, List<Integer> b) {
-        ArrayList<Integer> result = new ArrayList<>();
-        for (int i = 0; i < a.size(); i++) {
-            result.add(a.get(i));
-            result.add(b.get(i));
-        }
-
-        return result;
+        return null;
     }
 
 }

@@ -15,13 +15,6 @@ public class ReverseLinesExercise {
 
     public static void main(String[] args) throws IOException {
 
-        Path path = Paths.get("files/src/main/resources/linie");
-
-        List<String> strings = Files.readAllLines(path);
-
-        Collections.reverse(strings);
-
-        Files.write(path, strings);
 
     }
 

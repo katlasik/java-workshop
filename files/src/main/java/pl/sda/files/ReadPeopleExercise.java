@@ -17,29 +17,6 @@ public class ReadPeopleExercise {
 
     public static void main(String[] args) throws IOException {
 
-        List<String> rawAddresses = Files.readAllLines(Paths.get("files/src/main/resources/adresy"));
 
-        Map<String, String> addresses = new HashMap<>();
-
-        for (String address : rawAddresses) {
-            String[] parsed = address.split("\\|");
-            addresses.put(parsed[0], parsed[1]);
-        }
-
-        List<String> rawPeople = Files.readAllLines(Paths.get("files/src/main/resources/osoby"));
-
-        Map<String, String> people = new HashMap<>();
-
-        for (String person : rawPeople) {
-            String[] parsed = person.split("\\|");
-            people.put(parsed[0], parsed[1]);
-        }
-
-
-        for(Map.Entry<String, String> person: people.entrySet()) {
-            System.out.println(person.getKey()+ ", " + person.getValue()
-                    + ", " + addresses.getOrDefault(person.getKey(), "???"));
-
-        }
     }
 }
