@@ -3,7 +3,7 @@ package pl.sda.random;
 import java.util.List;
 
 /**
- * Stwórz metode `pickRandom`, która przyjmuje zmienną liczbę liczb, i losuje jedną z nich:
+ * Stwórz metode `pickRandom`, która przyjmuje listę liczb i losuje jedną z nich:
  *
  *    `[1,2,3,4,5] ~> 1`
  */
