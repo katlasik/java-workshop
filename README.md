@@ -74,21 +74,23 @@ Rozważ użycie metod `String.join` i `String.format`.
 
 ### Programowanie obiektowe
 
-1. * Stwórz klasę abstakcyjną Publication, zawierająca pola `author` i `year` i metody dostępowe do niej.
+1. * W pakiecie `pl.sda.publishinghouse` stwórz klasę abstakcyjną Publication, zawierająca pola `author`, `year` oraz `price` i metody dostępowe do niej.
      Stwórz konstruktor ustawiający te pola. Stwórz konstruktor, który ustawia tylko rok, a nazwę autora ustawia na "nieznany".
    * Stwórz klasy dziedziczące po niej: BlogEnty, Book, Ebook, Magazine.
-   * Dodaj pole price do Publication. Stwórz metodę `getPrice()`.
-     Przeciąż metodę `getPrice()` dla blog entry, tak, żeby zawsze zwracala wartość 0.
-   * Dodaj pole `isHardcover` tylko dla `Book`. Jeżeli pole to **true** to zwróć cene razy *1.2*.
+   * Dodaj pole `isHardcover` tylko dla `Book`. Jeżeli pole to **true** to przeciąż metodę `getPrice()`, tak by zwracałą cenę pomnożoną razy *2*.
    * Dodaj statyczne finalne pole DEFAULT_AUTHOR w Magazine przechowujące stałą wartość "Redaktor Naczelny".
      Jeżeli wartość zwrócona przez `getAuthor` klasy nadrzędnej to "nieznany" to zamiast niej zwróć wartość DEFAULT_AUTHOR.
-   * Stwórz klasę `PublishingHouse`, która będzie miała pole name.
-   * Dodaj do niej która będzie zawierała pole `publications` typu lista.
+   * Stwórz niezależną, nie dziedziczącą po `Publication` klasę `PublishingHouse`, która będzie miała pole name.
+   * Dodaj do niej pole `publications` typu lista.
    * Dodaj do niej metodę `addPublication`, która będzie dodawała publikacje dla wydawnictwa.
+   * Dodaj do `PublishingHouse` metodę `getPublications`, która będzie zwracała listę publikacji wydawnictwa.
+   * Dodaj klasę `PublishingHouseApp` z metodą `main`. Stwórz w niej obiekt `PublishingHouse`
+     i dodaj do niego publikacje.
    * Dodaj do `PublishingHouse` metodę `avgPrice`, która będzie wyznaczała średnią cenę publikacji w wydawnictwie.
    * Stwórz interfejs `Downloadable`, który będzie zawierał metodę `String downloadUrl`.
    * Stwórz interfejs `Printable`, który będzie zawierał metodę `int pageNumber`.
    * Dodaj to `PublishingHouse` metodę `downloadUrls`, która zwróci wszyskie linki do zasobów.
+   * Zmodyfikuj `getPublications`, tak by zwracałą posortowaną listę publikacji od najstarszej.
 
 2. * Stwórz klasę `Filtering`, która w konstruktorze przyjmuje dwie liczby i posiadaj metodę `filter`,
    która przyjmuje kolekcje liczb. Metoda ta powinna zwrócić nową kolekcję, ale tylko
@@ -121,9 +123,9 @@ Rozważ użycie metod `String.join` i `String.format`.
 5. Stwórz interfejs `NumberConverter` posiadającą jedna metodę: `String convert(String number)`
    * Stwórz klasę `MorseNumberConverter`, która zamienia liczbę na reprezentację w kodzie morsa.
    Rozważ użycie mapy jako słownika
-   * Stwórz klasę `RomanNumberConverter`, która zmienia arabską liczbę na rzymską.
+   * Stwórz klasę `HexNumberConverter`, która zmienia arabską liczbę na heksadecymalna.
    * Stwórz klase `NumberConverterFactory`, która posiada statyczną metodę `createConverter`, która jako parametr przyjmuje string.
-   Jeżeli zostanie podany do niej string *"roman"* powinna wrócić implementację `RomanNumberConverter`,
+   Jeżeli zostanie podany do niej string *"hex"* powinna wrócić implementację `HexNumberConverter`,
    a jeżeli *"morse"*, to `MorseNumberConverter`. Jeżeli zostanie podany inny string, to
    powinna zostać zwrócona implementacja `NumberConverter`, która zwraca string wejściowy `("test" -> "test")`.
    
@@ -135,7 +137,7 @@ Rozważ użycie metod `String.join` i `String.format`.
    
    * Zastanów się, czy za pomocą interfejsów można stworzyć ogólną wersję metody `modify`.
 
-   * Zastanów się, czy nie można zmienić metody `modify`, tak by można było wyszukiwać stringa, nie tylko po indeksie.
+   * Zastanów się, czy nie można zmienić metody `modify`, tak by można było wyszukiwać element po dowolnej właściwości nie tylko po indeksie.
 
 ### Varargs
 
@@ -184,7 +186,7 @@ Po dodaniu elementu
 ### Wyjątki
 
 1. Napisz metodę `checkNull` rzucającą wyjątek `NullPointerException`, gdy argument jest równy **null**.
-2. Napisz metodę `safeParse` parsująca liczbę ze łańcucha znaków, używajac `Integer.parse`. W przypadku nieudanej konwersji rzuć wyjątek `IllegalArgumentException`
+2. Napisz metodę `tryParse` parsująca liczbę ze łańcucha znaków, używajac `Integer.parse`. W przypadku nieudanej konwersji rzuć wyjątek `IllegalArgumentException`
 zawierający stary wyjątek oraz wiadomość "Nieprawidłowa liczba".
 3. Napisz własny wyjątek `OddSizeException`. Napisz metodę `checkList` wyrzucającą go,
 jeżeli liczba elementów jest nieparzysta. Podczas rzucania wyjątku napisz informację, dlaczego został rzucony.

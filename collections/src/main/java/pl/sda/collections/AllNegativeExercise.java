@@ -9,7 +9,12 @@ public class AllNegativeExercise {
      * zwracającą **true** tylko jeżeli wszystkie elementy listy są ujemne.
      */
     public static boolean allNegative(List<Integer> ints) {
-        return false;
+        for(int i: ints) {
+            if(i >= 0) {
+                return false;
+            }
+        }
+        return true;
     }
 
 }

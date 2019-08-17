@@ -4,12 +4,12 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-class HistorgramTest {
+class HistogramTest {
 
     @Test
     void showHistogram() {
 
-        assertThat(Histogram.showHistogram("aaabbbc")).isEqualTo("a:3\nb:3\nc");
+        assertThat(Histogram.showHistogram("aaabbbc")).isEqualTo("a:3 42%\nb:3 42%\nc:1 14%\n");
 
     }
 }
