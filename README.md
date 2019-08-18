@@ -183,8 +183,7 @@ liczba jest zbyt mała lub zbyt duża.
 ### Klasy generyczne
 
 1. * Stwórz klasę `Pair<X,Y>` przechowującą dwie wartości.
-   * Dodaj metody `Pair<X,Y> add(Pair<X,Y> p)` i `Pair<X,Y> substract(Pair<X,Y> p)`, które
-   tworzą nowy obiekt `Pair` dodając/odejmując od siebie wartości x oraz y punktów.
+   * Dodaj metodę swap, która zwraca nowy `Pair<Y,X>`.
    
 2. Stwórz klasę `RandomList<X>`, która ma następujące API, która ma dwie metody `add(X element)` oraz `X getRandom()`.
 Po dodaniu elementu
