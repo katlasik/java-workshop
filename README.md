@@ -174,16 +174,16 @@ liczba jest zbyt mała lub zbyt duża.
 
 ### Data i czas
 
+1. Napisz fukcję wyświetlającą godzinię na przykład `10:10:15` co 10 sekund.
 1. Napisz funkcję, która po otrzymaniu roku i miesiąca zwróci listę wszystkich dni danego miesiąca.
 2. Napisz funkcję `isAlmostTime` zwracającą true, jeżeli obecny czas jest z zakresie +/- 5 minut od podanego
    w parametrze.
-3.  * Napisz funkcję, która zwraca liczbę dni do następnych urodzin podanych jako parametr.
+3. Napisz funkcję, która zwraca liczbę dni do następnych urodzin podanych jako parametr.
 
 ### Klasy generyczne
 
 1. * Stwórz klasę `Pair<X,Y>` przechowującą dwie wartości.
-   * Dodaj metody `Pair<X,Y> add(Pair<X,Y> p)` i `Pair<X,Y> substract(Pair<X,Y> p)`, które
-   tworzą nowy obiekt `Pair` dodając/odejmując od siebie wartości x oraz y punktów.
+   * Dodaj metodę swap, która zwraca nowy `Pair<Y,X>`.
    
 2. Stwórz klasę `RandomList<X>`, która ma następujące API, która ma dwie metody `add(X element)` oraz `X getRandom()`.
 Po dodaniu elementu
