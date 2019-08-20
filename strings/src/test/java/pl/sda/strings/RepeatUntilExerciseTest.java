@@ -9,6 +9,7 @@ class RepeatUntilExerciseTest {
 
     @Test
     void repeatUntil() {
-        assertThat(RepeatUntilExercise.repeatUntil("raz", 13)).isEqualTo("razrazrazrazrazrazrazraz");
+        assertThat(RepeatUntilExercise.repeatUntil("raz", 13))
+                .isEqualTo("razrazrazrazrazrazrazraz");
     }
 }

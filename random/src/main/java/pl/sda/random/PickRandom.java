@@ -1,6 +1,9 @@
 package pl.sda.random;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.Random;
 
 /**
  * Stwórz metode `pickRandom`, która przyjmuje zmienną liczbę liczb, i losuje jedną z nich:
@@ -9,8 +12,20 @@ import java.util.List;
  */
 public class PickRandom {
 
-    Integer pickRandom(List<Integer> values) {
-        return null;
+    private static Random random = new Random();
+
+    static Integer pickRandom(List<Integer> values) {
+        return values.get(random.nextInt(values.size()));
+    }
+
+    static <T> T pickRandom(T... values) {
+        return values[random.nextInt(values.length)];
+    }
+
+    public static void main(String[] args) {
+        System.out.println(pickRandom(List.of(1,3,4,5,6)));
+        System.out.println(pickRandom(List.of(10, 20, 30, 40)));
+        System.out.println(pickRandom("A", "B", "C"));
     }
 
 }

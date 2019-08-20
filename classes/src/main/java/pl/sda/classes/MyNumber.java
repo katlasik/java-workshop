@@ -6,8 +6,8 @@ public class MyNumber {
 
   private final int value;
 
-  public MyNumber(int i) {
-      this.value = i;
+  public MyNumber(int value) {
+      this.value = value;
   }
 
   public int value() {

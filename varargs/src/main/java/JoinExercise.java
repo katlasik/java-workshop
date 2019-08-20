@@ -5,7 +5,16 @@ public class JoinExercise {
      *
      * `["Ania", "Kasia", "Beata"] -> "Ania i Kasia i Beata"`
      */
-    static String join(String... names) {
-         return "";
+    static String join(String... names){
+        String result = "";
+
+        for (int i = 0; i < names.length; i++) {
+            result += (names[i]);
+            if(i != names.length - 1) {
+                result += " i ";
+            }
+        }
+
+        return result;
      }
 }

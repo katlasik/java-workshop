@@ -6,6 +6,13 @@ import java.util.function.Predicate;
 
 public class ModifyExercise {
 
+    /**
+     * Stwórz metodę modifyUpperCase, która będzie otrzymywać listę stringów oraz liczbę (indeks elementu).
+     * Gdy indeks nie będzie wskazywał na żaden element rzuć IllegalArgumentException.
+     * W przypadku gdy zostanie podany poprawny indeks to zmień wszystkie znaki
+     * we wskazanym stringu na wielkie litery, a resztę pozostaw niezmienioną.
+     * Na przykład: ["aaa", "bbb", "ccc", "ddd"] oraz 2 -> ["aaa", "bbb", "CCC", "ddd"]
+     */
     public static List<String> modifyUppercase(List<String> strings, int index) {
         ArrayList<String> result = new ArrayList<>();
 
@@ -20,6 +27,12 @@ public class ModifyExercise {
         return result;
     }
 
+    /**
+     *
+     * Stwórz analogiczną metody modifyRepeat, która powiela string dwukrotnie.
+     * ["aaa", "bbb", "ccc", "ddd"] oraz 2 -> ["aaa", "bbb", "cccccc", "ddd"]
+     *
+     */
     public static List<String> modifyRepeat(List<String> strings, int index) {
         ArrayList<String> result = new ArrayList<>();
 
@@ -38,6 +51,9 @@ public class ModifyExercise {
         String modify(String input);
     }
 
+    /**
+     * Zastanów się, czy za pomocą interfejsów można stworzyć ogólną wersję metody modify.
+     */
     public static List<String> modify(List<String> strings, int index, Modification modification) {
         ArrayList<String> result = new ArrayList<>();
 
@@ -51,6 +67,9 @@ public class ModifyExercise {
         return result;
     }
 
+    /**
+     * Zastanów się, czy nie można zmienić metody modify, tak by można było wyszukiwać element po dowolnej właściwości nie tylko po indeksie.
+     */
     public static List<String> modifyFind(List<String> strings, Predicate<String> where, Modification modification) {
         ArrayList<String> result = new ArrayList<>();
 

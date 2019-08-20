@@ -12,6 +12,12 @@ public class IsSortedExercise {
      */
 
     public static boolean isSorted(List<Integer> ints) {
+
+        for(int i = 0; i < ints.size() - 1; i ++ ){
+            if(ints.get(i) >= ints.get(i + 1)) {
+                return false;
+            }
+        }
         return true;
     }
 
@@ -25,6 +31,18 @@ public class IsSortedExercise {
      */
 
     public static boolean isSorted(List<Integer> ints, boolean ascending) {
+
+        for(int i = 0; i < ints.size() - 1; i ++ ){
+            if(ascending) {
+                if(ints.get(i) >= ints.get(i + 1)) {
+                    return false;
+                }
+            } else {
+                if(ints.get(i) <= ints.get(i + 1)) {
+                    return false;
+                }
+            }
+        }
         return true;
     }
 

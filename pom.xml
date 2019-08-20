@@ -11,8 +11,6 @@
     <modules>
         <module>regex</module>
         <module>collections</module>
-        <module>teachers</module>
-        <module>io</module>
         <module>strings</module>
         <module>classes</module>
         <module>threads</module>
@@ -38,6 +36,11 @@
                     <source>1.10</source>
                     <target>1.10</target>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.22.1</version>
             </plugin>
         </plugins>
     </build>

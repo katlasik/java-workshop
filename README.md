@@ -7,15 +7,27 @@
 
 ## Zadania
 
-### Kolekcje
+### 1. Kolekcje
 
-1. Stwórz metodę `isSorted` przyjmującą listę i zwracającą true, gdy jej elementy zachowują rosnącą kolejność.
+1. Stwórz metodę `boolean isSorted(List <String> ints)` przyjmującą listę i zwracającą **true**, gdy jej elementy zachowują rosnącą kolejność.
 
 `[1,2,3,10,15]` -> `true`
 
 `[1,2,3,10,5]` -> `false`
 
-2. Stwórz metodę intercalate, która będzie otrzymywać listę elemntów `int` oraz dodatkowy element typu `int`.
+Stwórz drugą wersję metody `boolean isSorted(List <String> ints, boolean ascending)`. 
+Metoda powinna zwracać **true** jeżeli elementy są posortowane rosnąco i parametr `ascending` to **true**. 
+Jeżeli ascending to **false**, to powinna zwracać **true** gry elementy maleją.
+
+`[3,2,1], true -> false`
+
+`[1,2,3], true -> true`
+
+`[3,2,1], false -> false`
+
+`[1,2,3], false -> true`
+
+2. Stwórz metodę intercalate, która będzie otrzymywać listę elementów `int` oraz dodatkowy element typu `int`.
 Metoda ta ma zwrócić listę elementów listy przeplataną dodatkowym elementem:
 
 `[1,2,3]` oraz `5` -> `[1,5,2,5,3,5]`
@@ -45,24 +57,26 @@ wszystkie znaki oraz ile razy występuję. Na przykład `showHistogram("aaabbbc"
 a: 3, b: 3, c: 1
 ```
 
-Wyniki posortuj według liczy wyświetleń, a potem alfabetycznie.
+*(Dodatkowo)* obok liczby występowań wyświetl w nawiasie procentową wartość udziału znaku w łańcuchu.
 
-(Dodatkowo) obok liczby występowań wyświetl w nawiasie procentową wartość udziału znaku w łańcuchu.
+8. **(trudne)** Zaimplementuj [sito Erastotenesa](http://rasmus.is/pl/T/u/st23k01.htm). Funkcja obliczająca sito powinna 
+otrzymać jako parametr liczbę `limit` i powinna znaleźc wszystkie liczby pierwsze mniejsze od `limit`.
 
-8. **(trudne)** Zaimplementuj [sito Erastotenesa](http://rasmus.is/pl/T/u/st23k01.htm). Metoda otrzymawszy liczbę powinna znaleźc wszystkie liczbny pierwsze
-mniejsze od niej.
+9. **(trudne)** Zaimplementuj algorytm sortowania bąbęlkowego.
 
-9. **(trudne)** Zaimplementuj algorytm sortowanie bąbęlkowego.
-
-### String
+### 2. String
 
 1. Stwórz metodę `isPalindrome` sprawdzającą czy słowo jest palindromem:
 
-`kajak` -> true
-`kaja` -> false
+`kajak` -> `true`
+`kaja` -> `false`
 
-2. Stwórz metodę `unique` przyjmującą jako argument string. Metoda ta powinna zwrócić również string ale powinna
-pomijać wszystkie wystepujące już znaki. Na przykład:
+*(Dodatkowo)* Stwórz drugą wersję metody, która ignoruje spacje oraz wielkość liter podczas sprawdzania tekstu:
+
+`Kobyła ma mały bok` -> `true`
+
+2. Stwórz metodę `unique` przyjmującą jako argument łańcuch tekstowy. Metoda ta powinna zwrócić również łańcuch tekstowy,
+ale powinna pomijać wszystkie wystepujące już znaki. Na przykład:
 
 `abcabcd` -> `abcd`
 
@@ -74,14 +88,14 @@ Rozważ użycie metod `String.join` i `String.format`.
 4. Stwórz metodę `repeatUntil`, która będzie powtarzać dany string, aż jego długość przekroczy wartość progową.
    Na przykład, dla *"raz"* i *13*:
    
-     1 iteracja: size("raz") < 13 -> "razraz"
-     2 iteracja: size("razraz") <  13 -> "razrazrazraz"
-     3 iteracja: size("razrazrazraz") < 13 -> "razrazrazrazrazrazrazraz"
-     4 iteracja size("razrazrazrazrazrazrazraz") > 13 -> koniec
+     * 1 iteracja: `size("raz")` < *13* -> `"razraz"`
+     * 2 iteracja: `size("razraz")` <  *13* -> `"razrazrazraz"`
+     * 3 iteracja: `size("razrazrazraz")` < *13* -> `"razrazrazrazrazrazrazraz"`
+     * 4 iteracja: `size("razrazrazrazrazrazrazraz")` > *13* -> koniec
 
-### Programowanie obiektowe
+### 3. Programowanie obiektowe
 
-1. * W pakiecie `pl.sda.publishinghouse` stwórz klasę abstakcyjną Publication, zawierająca pola `author`, `year` oraz `price` i metody dostępowe do niej.
+1. * Stwórz klasę abstakcyjną Publication, zawierająca pola `author`, `year` oraz `price` i metody dostępowe do niej.
      Stwórz konstruktor ustawiający te pola. Stwórz konstruktor, który ustawia tylko rok, a nazwę autora ustawia na "nieznany".
    * Stwórz klasy dziedziczące po niej: BlogEnty, Book, Ebook, Magazine.
    * Dodaj pole `isHardcover` tylko dla `Book`. Jeżeli pole to **true** to przeciąż metodę `getPrice()`, tak by zwracałą cenę pomnożoną razy *2*.
@@ -99,21 +113,36 @@ Rozważ użycie metod `String.join` i `String.format`.
    * Dodaj to `PublishingHouse` metodę `downloadUrls`, która zwróci wszyskie linki do zasobów.
    * Zmodyfikuj `getPublications`, tak by zwracałą posortowaną listę publikacji od najstarszej.
 
-2. * Stwórz klasę `Filtering`, która w konstruktorze przyjmuje dwie liczby i posiadaj metodę `filter`,
+2. * Stwórz klasę `Filter`, która w konstruktorze przyjmuje dwie liczby i posiadaj metodę `filter`,
    która przyjmuje kolekcje liczb. Metoda ta powinna zwrócić nową kolekcję, ale tylko
    z liczbami, które znajdują się między tymi przyjętymi w konstruktorze.
+   
+   Dla `from` równe *3* i `to` równe *6*:
+   
+    `[1,2,3,5,10]` -> `[3,5]`
 
-   * Stwórz klasę `DoubleAndDouble`, która dziedziczy po `Filtering` i która
-    oprócz tego, że filtruje liczby, mnoży je razy 2. Skorzystaj z logiki filtrowanie
-    zaimplementowanej w `Filtering` i nie implementuj jej drugi raz w `Filtering`.
+   * Stwórz klasę `FilterAndMultiply`, która dziedziczy po `Filter` i która
+    oprócz tego, że filtruje liczby, mnoży je razy parametr podany jako trzeci w konstruktorze. Skorzystaj z logiki filtrowanie
+    zaimplementowanej w `Filter` i nie implementuj jej drugi raz w `Filter`.
+    
+    Dla `from` równe *3*, `to` równe *6* i `multiply` równe *5*:
+    
+    `[1,2,3,5,10]` -> `[15,25]`
 
 3. Utwórz klasę o nazwie `MyNumber`, której jedyny konstruktor przyjmuje liczbę. Klasa powinna mieć następujące metody
-   `MyNumber isOdd()` – true jeśli atrybut jest nieparzysty,
-   `MyNumber isEven()` – true jeśli atrybut jest parzysty,
-   `MyNumber sqrt()` – pierwiastek z atrybutu,
-   `MyNumber pow(MyNumber x)` – atrybut podniesiony do potęgi x (przydatnej metody poszukaj w javadoc do klasy Math),
-   `MyNumber add(MyNumber x)` – zwraca sumę atrybutu i x opakowaną w klasę `MyNumber`,
-   `MyNumber subtract(MyNumber x)` – zwraca różnicę atrybutu i x opakowaną w klasę `MyNumber`.
+   
+   * `boolean isOdd()` – true jeśli atrybut jest nieparzysty
+   
+   * `boolean isEven()` – true jeśli atrybut jest parzysty
+   
+   * `MyNumber sqrt()` – pierwiastek z atrybutu,
+   
+   * `MyNumber pow(MyNumber x)` – atrybut podniesiony do potęgi x (przydatnej metody poszukaj w javadoc do klasy Math),
+   
+   * `MyNumber add(MyNumber x)` – zwraca sumę atrybutu i x opakowaną w klasę `MyNumber`,
+   
+   * `MyNumber subtract(MyNumber x)` – zwraca różnicę atrybutu i x opakowaną w klasę `MyNumber`.
+   
    Powyższe metody nie powinny modyfikować oryginalnego obiektu, czyli klasa `MyNumber` musi być niemutowalna.
 
 4. W pakiecie `space` stwórz następujące klasy:
@@ -125,11 +154,23 @@ Rozważ użycie metod `String.join` i `String.format`.
    * Stwórz mutowalną, następnie niemutowalną wersję.
    * Stwórz klasę `StellarSystem`, która powinna mieć możliwość posiadania planet.
    * Dodaj do klasy `StellarSystem` metodę `moons`, która będzie zwracała listę księżyców wszystkich planet.
-   * Zaimplementuj interfejs `Comparable` dla planety, porównujący je według rozmiaru.
+   * Zaimplementuj interfejs `Comparable` dla `Stellar`, porównujący je według rozmiaru.
 
 5. Stwórz interfejs `NumberConverter` posiadającą jedna metodę: `String convert(String number)`
-   * Stwórz klasę `MorseNumberConverter`, która zamienia liczbę na reprezentację w kodzie morsa.
-   Rozważ użycie mapy jako słownika
+   * Stwórz klasę `MorseNumberConverter`, która zamienia liczbę na reprezentację w kodzie Morse'a.
+     Rozważ użycie mapy jako słownika. Cyfry w reprezentacji języka Morse'a: 
+     * 1:  • — — — —
+     * 2:  • • — — —
+     * 3:  • • • — —
+     * 4:  • • • • —
+     * 5:  • • • • •
+     * 6:  — • • • •
+     * 7:  — — • • •
+     * 8:  — — — • •
+     * 9:  — — — — •
+     * 0:  — — — — —
+  
+   
    * Stwórz klasę `HexNumberConverter`, która zmienia arabską liczbę na heksadecymalna.
    * Stwórz klase `NumberConverterFactory`, która posiada statyczną metodę `createConverter`, która jako parametr przyjmuje string.
    Jeżeli zostanie podany do niej string *"hex"* powinna wrócić implementację `HexNumberConverter`,
@@ -146,15 +187,15 @@ Rozważ użycie metod `String.join` i `String.format`.
 
    * Zastanów się, czy nie można zmienić metody `modify`, tak by można było wyszukiwać element po dowolnej właściwości nie tylko po indeksie.
 
-### Varargs
+### 4. Varargs
 
-1. Stwórz metodę `int sumAll(int... elements)`, która będzie zwracać sumę wszyskich podanych elementów.
+1. Stwórz metodę `int sumAll(int... elements)`, która będzie zwracać sumę wszyskich podanych elementów:
 
-    `[1,2,3] -> 6`
+    `1,2,3 -> 6`
 
-2. Stwórz metodę `String join(String... elements)`, która będzie łaczyć wszystkie podane łańcuchy za pomocą łącznika " i ":
+2. Stwórz metodę `String join(String... elements)`, która będzie łaczyć wszystkie podane łańcuchy za pomocą łącznika *" i "*:
 
-    `["Ania", "Kasia", "Beata"] -> "Ania i Kasia i Beata"`
+    `"Ania", "Kasia", "Beata" -> "Ania i Kasia i Beata"`
 
 3. Sprawdź w jaki sposób działają metody tworzące kolekcje:
 
@@ -162,35 +203,38 @@ Rozważ użycie metod `String.join` i `String.format`.
     * `Map.of` dla map.
     * `Set.of` dla setów
 
-### Random
+### 5. Random
 
-1. Stwórz metode `pickRandom`, która przyjmuje zmienną liczbę liczb, i losuje jedną z nich:
+1. Stwórz metode `pickRandom`, która przyjmuje dowolną ilość liczb i losuje jedną z nich:
 
-   `[1,2,3,4,5] ~> 1`
+   `1,2,3,4,5 ~> 1`
    
 2. **(trudne)** Stwórz grę, która będzie losowała wartość od 1 do 100, następnie będzie prosiła użytkownika o podanie liczby.
 W przypadku gdy użytkownik trafi, to gra informuje go o zwycięstwie, a jeżeli nie trafi, to informuje go czy 
 liczba jest zbyt mała lub zbyt duża.
 
-### Data i czas
+### 6. Data i czas
 
-1. Napisz funkcję, która po otrzymaniu roku i miesiąca zwróci listę wszystkich dni danego miesiąca.
-2. Napisz funkcję `isAlmostTime` zwracającą true, jeżeli obecny czas jest z zakresie +/- 5 minut od podanego
+1. Napisz fukcję wyświetlającą godzinię na przykład `10:10:15` co 10 sekund.
+2. Napisz funkcję, która po otrzymaniu roku i miesiąca zwróci listę wszystkich dni danego miesiąca.
+3. Napisz funkcję `isAlmostTime` zwracającą true, jeżeli obecny czas jest z zakresie +/- 5 minut od podanego
    w parametrze.
-3.  * Napisz funkcję, która zwraca liczbę dni do następnych urodzin podanych jako parametr.
+4. Napisz funkcję, która zwraca liczbę dni do następnych urodzin podanych jako parametr.
 
-### Klasy generyczne
+### 7. Klasy generyczne
 
 1. * Stwórz klasę `Pair<X,Y>` przechowującą dwie wartości.
-   * Dodaj metody `Pair<X,Y> add(Pair<X,Y> p)` i `Pair<X,Y> substract(Pair<X,Y> p)`, które
-   tworzą nowy obiekt `Pair` dodając/odejmując od siebie wartości x oraz y punktów.
+   * Dodaj metodę swap, która zwraca nowy `Pair<Y,X>`.
    
-2. Stwórz klasę `RandomList<X>`, która ma następujące API, która ma dwie metody `add(X element)` oraz `X getRandom()`.
-Po dodaniu elementu
+2. Stwórz klasę `RandomList<X>`, która ma dwie metody `add(X element)` oraz `X getRandom(boolean returning)`.
+Po dodaniu elementów do listy wywołanie metody `getRandom` powinno zwracać losowy element. Jeżeli `returning` to **false**,
+to lista powinna usunąć wylosowany element, a jeżeli **true** to powinna go zachować. Jeżeli metoda zostanie wywołana
+na pustej liście rzuć wyjątek `IllegalStateException`.
 
-3. Zmodyfikuj metodę `pickRandom`, `intercalate`, `intersperse` tak, by działała na dowolnych typach.
+3. Zmodyfikuj metodę `pickRandom`, `intercalate`, `intersperse` tak, by działały na dowolnych typach. 
+   Zastanów się czy można zmodyfikować także inne metody by były generyczne.
 
-### Wyjątki
+### 8. Wyjątki
 
 1. Napisz metodę `checkNull` rzucającą wyjątek `NullPointerException`, gdy argument jest równy **null**.
 2. Napisz metodę `tryParse` parsująca liczbę ze łańcucha znaków, używajac `Integer.parse`. W przypadku nieudanej konwersji rzuć wyjątek `IllegalArgumentException`
@@ -198,7 +242,7 @@ zawierający stary wyjątek oraz wiadomość "Nieprawidłowa liczba".
 3. Napisz własny wyjątek `OddSizeException`. Napisz metodę `checkList` wyrzucającą go,
 jeżeli liczba elementów jest nieparzysta. Podczas rzucania wyjątku napisz informację, dlaczego został rzucony.
 4. Stwórz kalkulator bezpiecznie wczytujący liczby i dodającą je listy.
- Po wpisaniu przez użytkownika `=` program powinien wyświetlić liczby oraz sumę.
+ Po wpisaniu przez użytkownika `=` program powinien wyświetlić listę liczb oraz ich sumę.
 
    * Jeżeli liczba jest poprawna, np. *123* to powinna zostać dodana do listy.
    * Jeżeli liczba jest niepoprawna, to wyjątek *InputMismatchException* powinien zostać przechwycony i 
@@ -206,11 +250,11 @@ jeżeli liczba elementów jest nieparzysta. Podczas rzucania wyjątku napisz inf
      kończyć działania programu.
 
 
-### Typy wyliczeniowe
+### 9. Typy wyliczeniowe
 
-1. * Stwórz typ wyliczeniowy `pl.sda.enums.Color`.
-   * Dodaj kolory, takie jak `Black`, `Red`, `Yellow`.
-   * Dodaj do niego metode `getHex` zwracającą heksadecymalną reprezentację koloru.
+1. * Stwórz typ wyliczeniowy `Color`.
+   * Dodaj kolory, takie jak `BLACK`, `RER`, `YELLOW`.
+   * Dodaj do niego metode `String getHex()` zwracającą heksadecymalną reprezentację koloru.
 
 2. * Stwórz typ wyliczeniowy `DayOfWeek` zawierający nazwy dni tygodnia.
    * Dodaj do enumeracji pole zwracające skróconą nazwę, dnia np, `Tue`.
@@ -221,12 +265,12 @@ jeżeli liczba elementów jest nieparzysta. Podczas rzucania wyjątku napisz inf
    * Stwórz klasę `OfficeWorkingHours`  otrzymującą jako wejście `DayOfWeek`.
      Klasa w konstruktorze musi otrzymać listę zawierająca `DayOfWeek` o nazwie `daysWithExtendedWorkingHours`
      i zapisać je jako pole.
-   * Stwórz metodę `getOfficeWorkingHours` zwracającą czas pracy urzęduL
+   * Stwórz metodę `String getOfficeWorkingHours(DayOfWeek day)` zwracającą czas pracy urzędu:
       * *8-15* jeżeli jest to normalny dzień
       * *8-17* jeżeli jest to dzień z rozszerzonymi godzinami pracy
       * *zamknięte* jeżeli jest to weekend.
       
-### Pliki
+### 10. Pliki
 
 1. Wczytaj plik wpisujący obecną datę i godzinę do pliku `time`. Kolejne uruchomienia programu
 powinny pozostawiać starą zawartość, a tylko dodawać nową linię na końcu pliku.
@@ -234,15 +278,17 @@ powinny pozostawiać starą zawartość, a tylko dodawać nową linię na końcu
 2. Napisz program, który wczytuje wszystkie linie z pliku `linie`, następnie 
 nadpisuje go wpisując linie w odwrotnej kolejności.
 
+*(Dodatkowo)* Napisz program, który nadpisuje linie w losowy sposób (losuje kolejność).
+
 3. Wczytaj plik `osoby` zawierający numery PESEL i nazwiska oraz imiona, podzielone znakiem **|**, a następnie `adresy`
-zawierający numery PESEl i adresy zamieszkania podzielone znakiem **|**. Połącz dane z obydwóch plików i wyświetl dla wszystich osób
+zawierający numery PESEL i adresy zamieszkania podzielone znakiem **|**. Połącz dane z obydwóch plików i wyświetl dla wszystich osób
 dane w formacie *PESEL, imię, nazwisko, adres*. Jeżeli dla danej osoby nie istnieje linia w pliku `adresy.txt` to wyświetl *???*. 
 
-### Wątki
+### 11. Wątki
 
 1. Stwórz nowy wątek wyświetlający napis `Witaj z innego wątku!` co 10 sekund oraz dodaj pętlę
-w głownym wątku wyświetljącą `Witaj z głownego wątku!` co 20 sekund. 
+w głównym wątku wyświetljącą `Witaj z głownego wątku!` co 20 sekund. 
 
-2. Stwórz klasę dziedziczącą po `Runnable`, która jako parametr otrzyma liczbę. Zadaniem obieku tej
+2. Stwórz klasę implementującą interfejs `Runnable`, która jako parametr otrzyma liczbę. Zadaniem obieku tej
 klasy będzie wyświetlenie liczby razem z z nazwą watku, a następnie odczekanie 1 sekundy i zmniejszenie wartości
-o 1, a natępnie powtórzenie operacji aż do osiągnięcia 0. Innymi słowy należe odliczyć od n do 0.
+licznika o 1, a natępnie powtórzenie operacji aż do osiągnięcia 0. Innymi słowy należe odliczyć od n do 0.

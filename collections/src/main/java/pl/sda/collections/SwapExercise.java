@@ -1,5 +1,6 @@
 package pl.sda.collections;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -9,11 +10,36 @@ import java.util.List;
 public class SwapExercise {
 
     static int[] swap (int[] ints, int from, int to) {
-        return ints;
+
+        int[] newInts = new int[ints.length];
+
+        for (int i = 0; i < ints.length; i++) {
+            if(i == from) {
+                newInts[i] = ints[to];
+            } else if(i == to) {
+                newInts[i] = ints[from];
+            } else {
+                newInts[i] = ints[i];
+            }
+        }
+
+        return newInts;
     }
 
     static List<Integer> swapList (List<Integer> ints, int from, int to) {
-        return ints;
+       ArrayList<Integer> newInts = new ArrayList<Integer>();
+
+        for (int i = 0; i < ints.size(); i++) {
+            if(i == from) {
+                newInts.add(ints.get(to));
+            } else if(i == to) {
+                newInts.add(ints.get(from));
+            } else {
+                newInts.add(ints.get(i));
+            }
+        }
+
+        return newInts;
     }
 
 }

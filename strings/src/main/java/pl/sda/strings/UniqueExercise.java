@@ -1,6 +1,6 @@
 package pl.sda.strings;
 
-import java.util.HashSet;
+import java.util.ArrayList;
 
 public class UniqueExercise {
 
@@ -13,7 +13,15 @@ public class UniqueExercise {
    */
 
   public static String unique(String input) {
-    return null;
+
+    ArrayList<String> result = new ArrayList<>();
+
+    for(String c: input.split("")) {
+      if(!result.contains(c)){
+        result.add(c);
+      }
+    }
+    return String.join("", result);
   }
 
 }

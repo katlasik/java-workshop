@@ -14,7 +14,14 @@ public class RepeatUntilExercise {
    */
 
   public static String repeatUntil(String input, int i) {
-    return "";
+    String result = input;
+
+    while(result.length() < i) {
+      result = result + result;
+    }
+
+    return result;
+
   }
 
 }

@@ -22,7 +22,7 @@ public class MorseCodeNumberConverter implements NumberConverter {
 
         String result = "";
         for (char c: number.toString().toCharArray()) {
-            result += DICT.get(c);
+            result += DICT.get(c) + " ";
         }
         return result;
     }
