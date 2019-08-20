@@ -7,15 +7,27 @@
 
 ## Zadania
 
-### Kolekcje
+### 1. Kolekcje
 
-1. Stwórz metodę `isSorted` przyjmującą listę i zwracającą true, gdy jej elementy zachowują rosnącą kolejność.
+1. Stwórz metodę `boolean isSorted(List <String> ints)` przyjmującą listę i zwracającą true, gdy jej elementy zachowują rosnącą kolejność.
 
 `[1,2,3,10,15]` -> `true`
 
 `[1,2,3,10,5]` -> `false`
 
-2. Stwórz metodę intercalate, która będzie otrzymywać listę elemntów `int` oraz dodatkowy element typu `int`.
+Stwórz drugą werję metody `boolean isSorted(List <String> ints, boolean ascending)`. 
+Metoda owinna zwracać **true** jeżeli elementy są posortowane rosnąco i parametr `ascending` to **true**. 
+Jeżeli ascending to **false**, to powinna zwracać **true** gry element maleją.
+
+`[3,2,1], true -> false`
+
+`[1,2,3], true -> true`
+
+`[3,2,1], false -> false`
+
+`[1,2,3], false -> true`
+
+2. Stwórz metodę intercalate, która będzie otrzymywać listę elementów `int` oraz dodatkowy element typu `int`.
 Metoda ta ma zwrócić listę elementów listy przeplataną dodatkowym elementem:
 
 `[1,2,3]` oraz `5` -> `[1,5,2,5,3,5]`

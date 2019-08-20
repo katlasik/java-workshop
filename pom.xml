@@ -11,8 +11,6 @@
     <modules>
         <module>regex</module>
         <module>collections</module>
-        <module>teachers</module>
-        <module>io</module>
         <module>strings</module>
         <module>classes</module>
         <module>threads</module>
