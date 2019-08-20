@@ -7,7 +7,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 class UniqueExerciseTest {
 
   @Test
-  void unique() {
+  void uniqueTest() {
     assertThat(UniqueExercise.unique("aaabbbccc")).isEqualTo("abc");
   }
 }

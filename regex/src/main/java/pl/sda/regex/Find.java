@@ -3,7 +3,7 @@ package pl.sda.regex;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Ch4FindExamples {
+public class Find {
 
   /**
    * Uzupełnij fukcję, tak by znalazła tekst umieszczony pomiędzy pojedyńczymi cudzysłowami.
@@ -19,7 +19,7 @@ public class Ch4FindExamples {
     Pattern pattern = Pattern.compile(regex);
     Matcher matcher = pattern.matcher(input);
 
-    return null;
+    return matcher.find() ? matcher.group(): null;
 
   }
 
@@ -40,7 +40,7 @@ public class Ch4FindExamples {
     Pattern pattern = Pattern.compile(regex);
     Matcher matcher = pattern.matcher(input);
 
-    return null;
+    return matcher.find() ? matcher.group(): null;
 
   }
 

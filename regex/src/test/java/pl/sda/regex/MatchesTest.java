@@ -4,9 +4,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Java6Assertions.assertThat;
 
-public class P1MatchesExamplesTest {
+public class MatchesTest {
 
-  Ch1MatchesExamples examples = new Ch1MatchesExamples();
+  Matches examples = new Matches();
 
   @Test
   public void isNumber() {
@@ -69,10 +69,10 @@ public class P1MatchesExamplesTest {
 
   @Test
   public void isCapitalized() {
-    assertThat(examples.isQuoted("Tekst")).isTrue();
-    assertThat(examples.isQuoted("T")).isTrue();
-    assertThat(examples.isQuoted("false")).isFalse();
-    assertThat(examples.isQuoted("")).isFalse();
+    assertThat(examples.isCapitalized("Tekst")).isTrue();
+    assertThat(examples.isCapitalized("T")).isTrue();
+    assertThat(examples.isCapitalized("false")).isFalse();
+    assertThat(examples.isCapitalized("")).isFalse();
   }
 
   @Test
@@ -80,7 +80,7 @@ public class P1MatchesExamplesTest {
 
     assertThat(examples.isRequest("Kup mleko.")).isTrue();
     assertThat(examples.isRequest("Kup mleko, banany.")).isTrue();
-    assertThat(examples.isRequest("Kup mleko, banany, wodę.")).isTrue();
+    assertThat(examples.isRequest("Kup mleko, banany, sok.")).isTrue();
     assertThat(examples.isRequest("Kup banany")).isFalse();
     assertThat(examples.isRequest("Kup")).isFalse();
     assertThat(examples.isRequest("banany")).isFalse();

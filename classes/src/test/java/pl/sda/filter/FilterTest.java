@@ -1,4 +1,4 @@
-package pl.sda.classes;
+package pl.sda.filter;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;

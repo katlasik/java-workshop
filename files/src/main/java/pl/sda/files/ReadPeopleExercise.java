@@ -1,11 +1,7 @@
 package pl.sda.files;
 
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+
 
 /**
  * Wczytaj plik `osoby` zawierający numery PESEL i nazwiska oraz imiona, podzielone znakiem **|**, a następnie `adresy`

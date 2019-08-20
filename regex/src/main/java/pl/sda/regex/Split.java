@@ -1,9 +1,9 @@
 package pl.sda.regex;
 
-public class Ch3SplitExamples {
+public class Split {
 
   /**
-   * Uzupełnij fukcję, tak by podzieliła łańcuch na części według znaków , albo ; albo |.
+   * Uzupełnij fukcję, tak by podzieliła łańcuch na części według znaku |.
    *
    * a|b|c|d -> [a,b,c,d]
    *

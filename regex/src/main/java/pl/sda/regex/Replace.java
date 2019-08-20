@@ -1,6 +1,6 @@
 package pl.sda.regex;
 
-public class Ch2ReplaceExamples {
+public class Replace {
 
   /**
    * Uzupełnij fukcję, tak usunęła wszystkie białe znaki z łancucha.

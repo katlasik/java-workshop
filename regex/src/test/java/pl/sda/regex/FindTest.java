@@ -1,13 +1,12 @@
 package pl.sda.regex;
 
 import org.junit.jupiter.api.Test;
-import pl.sda.regex.Ch4FindExamples;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class P4FindExamplesTest {
+public class FindTest {
 
-  private Ch4FindExamples examples = new Ch4FindExamples();
+  private Find examples = new Find();
 
   @Test
   void testFindQuoted() {

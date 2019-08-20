@@ -1,6 +1,5 @@
 package pl.sda.strings;
 
-import java.util.HashSet;
 
 public class UniqueExercise {
 

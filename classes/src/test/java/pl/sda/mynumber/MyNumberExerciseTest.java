@@ -1,6 +1,7 @@
-package pl.sda.classes;
+package pl.sda.mynumber;
 
 import org.junit.jupiter.api.Test;
+import pl.sda.mynumber.MyNumber;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

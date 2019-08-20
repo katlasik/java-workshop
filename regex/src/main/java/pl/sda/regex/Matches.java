@@ -1,6 +1,6 @@
 package pl.sda.regex;
 
-public class Ch1MatchesExamples {
+public class Matches {
 
   /**
    * Uzupełnij fukcję, tak by sprawdzała, czy podany łańcuch zawiera tylko cyfry.
@@ -114,7 +114,7 @@ public class Ch1MatchesExamples {
    *
    * Kup mleko.               -> true
    * Kup mleko, banany.       -> true
-   * Kup mleko, banany, wodę. -> true
+   * Kup mleko, banany, sok . -> true
    * Kup banany               -> false          // brak kropki
    * Kup                      -> false          // brak produktu
    * banany                   -> false          // tylko produkt
