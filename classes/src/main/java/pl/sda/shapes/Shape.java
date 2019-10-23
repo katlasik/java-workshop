@@ -6,7 +6,7 @@ package pl.sda.shapes;
  * Stwórz wspólny interfejs `Shape` dla tych klas.
  * Dodaj klasę `ShapeApp`i stwórz w niej metodę `displayShape` otwrzymującą jako parametr `Shape` i wyświetlający pole i obwód.
  * Dodaj do klasy `ShapeApp` metodę `main`, w której będzie można zapytać użytkownika jaką figurę chce wpisać,
- * a następnie wczytać potrzebne dane i wywyłać `displayShape`.
+ * a następnie wczytać potrzebne dane i wywołać `displayShape`.
  */
 
 public interface Shape {
