@@ -9,7 +9,7 @@ class HistogramTest {
     @Test
     void showHistogram() {
 
-        assertThat(Histogram.showHistogram("aaabbbc")).isEqualTo("a:3 42%\nb:3 42%\nc:1 14%\n");
+        assertThat(HistogramExercise.showHistogram("aaabbbc")).isEqualTo("a:3 42%\nb:3 42%\nc:1 14%\n");
 
     }
 }

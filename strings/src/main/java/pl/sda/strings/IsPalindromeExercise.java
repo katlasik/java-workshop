@@ -27,6 +27,9 @@ public class IsPalindromeExercise {
     return true;
   }
 
+  /**
+   * Stwórz drugą wersję metody, która ignoruje spacje oraz wielkość liter podczas sprawdzania tekstu.
+   */
   public static boolean isPalindromeIngoringSpaceAndCase(String input) {
     return isPalindrome(input.toLowerCase().replace(" ", ""));
   }

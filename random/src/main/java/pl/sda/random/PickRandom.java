@@ -1,12 +1,10 @@
 package pl.sda.random;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
 /**
- * Stwórz metode `pickRandom`, która przyjmuje zmienną liczbę liczb, i losuje jedną z nich:
+ * Stwórz metode `pickRandom`, która przyjmuje dowolną ilość liczb i losuje jedną z nich:
  *
  *    `[1,2,3,4,5] ~> 1`
  */

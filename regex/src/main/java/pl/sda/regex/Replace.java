@@ -1,6 +1,6 @@
 package pl.sda.regex;
 
-public class Ch2ReplaceExamples {
+public class Replace {
 
   /**
    * Uzupełnij fukcję, tak usunęła wszystkie białe znaki z łancucha.
@@ -11,8 +11,8 @@ public class Ch2ReplaceExamples {
    */
   String removeWhitespace(String input) {
 
-    String regex = null;
-    String replacement = null;
+    String regex = "\\W+";
+    String replacement = "";
 
     return input.replaceAll(regex, replacement);
   }
@@ -28,8 +28,8 @@ public class Ch2ReplaceExamples {
 
   String replaceVowels(String input) {
 
-    String regex = null;
-    String replacement = null;
+    String regex = "[aeoiuy]";
+    String replacement = "_";
 
     return input.replaceAll(regex, replacement);
   }
@@ -45,8 +45,8 @@ public class Ch2ReplaceExamples {
 
   String replaceUnderscore(String input) {
 
-    String regex = null;
-    String replacement = null;
+    String regex = "_+";
+    String replacement = "_";
 
     return input.replaceAll(regex, replacement);
   }

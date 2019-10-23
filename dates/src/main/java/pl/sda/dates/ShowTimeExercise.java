@@ -2,7 +2,6 @@ package pl.sda.dates;
 
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
-import java.time.temporal.ChronoUnit;
 
 /**
  * Napisz fukcję wyświetlającą godzinię na przykład `10:10:15` co 10 sekund.

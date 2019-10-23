@@ -1,6 +1,6 @@
 package pl.sda.regex;
 
-public class Ch1MatchesExamples {
+public class Matches {
 
   /**
    * Uzupełnij fukcję, tak by sprawdzała, czy podany łańcuch zawiera tylko cyfry.
@@ -10,7 +10,7 @@ public class Ch1MatchesExamples {
    *
    */
   boolean isNumber(String input) {
-    String regex = null;
+    String regex = "\\d++";
     return input.matches(regex);
   }
 
@@ -25,7 +25,7 @@ public class Ch1MatchesExamples {
    */
   boolean isHex(String input) {
 
-    String regex = null;
+    String regex = "[a-eA-E0-9]+";
 
     return input.matches(regex);
   }
@@ -40,7 +40,7 @@ public class Ch1MatchesExamples {
    */
   boolean isWeekday(String input) {
 
-    String regex = null;
+    String regex = "Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday";
 
     return input.matches(regex);
   }
@@ -55,7 +55,7 @@ public class Ch1MatchesExamples {
    */
   boolean isEven(String input) {
 
-    String regex = null;
+    String regex = "\\d*[24680]";
 
     return input.matches(regex);
   }
@@ -71,7 +71,7 @@ public class Ch1MatchesExamples {
    */
   boolean isHyphenized(String input) {
 
-    String regex = null;
+    String regex = "([a-z0-9]+-)*[a-z0-9]+";
 
     return input.matches(regex);
   }
@@ -87,7 +87,7 @@ public class Ch1MatchesExamples {
    */
   boolean isQuoted(String input) {
 
-    String regex = null;
+    String regex = "^\".+\"$";
 
     return input.matches(regex);
   }
@@ -102,7 +102,7 @@ public class Ch1MatchesExamples {
    */
   boolean isCapitalized(String input) {
 
-    String regex = null;
+    String regex = "[A-Z][a-z]*";
 
     return input.matches(regex);
   }
@@ -114,7 +114,7 @@ public class Ch1MatchesExamples {
    *
    * Kup mleko.               -> true
    * Kup mleko, banany.       -> true
-   * Kup mleko, banany, wodę. -> true
+   * Kup mleko, banany, sok . -> true
    * Kup banany               -> false          // brak kropki
    * Kup                      -> false          // brak produktu
    * banany                   -> false          // tylko produkt
@@ -122,7 +122,7 @@ public class Ch1MatchesExamples {
    */
   boolean isRequest(String input) {
 
-    String regex = null;
+    String regex = "Kup ([a-z]+, )*[a-z]+\\.";
 
     return input.matches(regex);
   }

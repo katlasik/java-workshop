@@ -1,6 +1,19 @@
-package pl.sda.classes;
+package pl.sda.mynumber;
 
 import java.util.Objects;
+
+/**
+ * Utwórz klasę o nazwie `MyNumber`, której jedyny konstruktor przyjmuje liczbę. Klasa powinna mieć następujące metody:
+ *
+ * `boolean isOdd()` – `true` jeśli paramentr jest nieparzysty
+ * `boolean isEven()` – `true` jeśli paramentr jest parzysty
+ * `MyNumber sqrt()` – pierwiastek z paramentru,
+ * `MyNumber pow(MyNumber x)` – parametr podniesiony do potęgi `x` (potrzebnej metody poszukaj w javadoc w klasie Math) opakowany `MyNumber`,
+ * `MyNumber add(MyNumber x)` – zwraca sumę atrybutu i `x` opakowaną w klasę `MyNumber`,
+ * `MyNumber subtract(MyNumber x)` – zwraca różnicę atrybutu i `x` opakowaną w klasę `MyNumber`.
+ *
+ * Powyższe metody nie powinny modyfikować oryginalnego obiektu, czyli klasa `MyNumber` musi być niemutowalna.
+ */
 
 public class MyNumber {
 

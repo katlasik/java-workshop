@@ -11,7 +11,6 @@ import java.util.Scanner;
  *
  * Rozważ użycie metod `String.join` i `String.format`.
  */
-
 public class ReadWords {
 
     public static void main(String[] args) {
