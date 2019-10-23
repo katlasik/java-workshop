@@ -20,7 +20,7 @@
    * Stwórz wspólny interfejs `Shape` dla tych klas.
    * Dodaj klasę `ShapeApp`i stwórz w niej metodę `displayShape` otwrzymującą jako parametr `Shape` i wyświetlający pole i obwód.
    * Dodaj do klasy `ShapeApp` metodę `main`, w której będzie można zapytać użytkownika jaką figurę chce wpisać, 
-     a następnie wczytać potrzebne dane i wywyłać `displayShape`.
+     a następnie wczytać potrzebne dane i wywołać `displayShape`.
      
 3. * Stwórz klasę abstakcyjną `Publication`, zawierająca pola `author`, `year` oraz `price` i metody dostępowe do niej.
      Stwórz konstruktor ustawiający te pola. Stwórz konstruktor, który ustawia tylko rok, a nazwę autora ustawia na *"nieznany"*.
@@ -40,10 +40,10 @@
    * Dodaj nowy obiekt `PublishingHouse`. Zmodyfikuj aplikację tak, aby umożliwiała wybranie wydawnictwa do którego chcemy dodać wydawnictwa.
    * Dodaj do `PublishingHouse` metodę `avgPrice`, która będzie wyznaczała średnią cenę publikacji w wydawnictwie.
    * Stwórz interfejs `Downloadable`, który będzie zawierał metodę `String downloadUrl`. Zmodyfikuj 
-     `BlogEntry` oraz `Ebook`, tak by go implementowały. CZy `Magazine` i `Book` powinny implementować `Downloadable`?
+     `BlogEntry` oraz `Ebook`, tak by go implementowały. Czy `Magazine` i `Book` powinny implementować `Downloadable`?
    * Stwórz interfejs `Printable`, który będzie zawierał metodę `int pageNumber`. Zmodyfikuj `Book` i `Magazine`, tak by go implementowały.
      Czy pozostałe klasy powinny go impementować?
-   * Dodaj to `PublishingHouse` metodę `downloadUrls`, która zwróci wszyskie linki do publikacji online.
+   * Dodaj do `PublishingHouse` metodę `downloadUrls`, która zwróci wszyskie linki do publikacji online.
    * Zmodyfikuj `getPublications`, tak by zwracałą posortowaną listę publikacji od najstarszej.
 
 4. * Stwórz klasę `Filter`, która w konstruktorze przyjmuje dwie liczby i posiada metodę `filter`,
@@ -119,39 +119,39 @@
 
 1. Stwórz metodę `boolean isSorted(List <String> ints)` przyjmującą listę i zwracającą `true`, gdy jej elementy zachowują rosnącą kolejność.
 
-`[1,2,3,10,15]` -> `true`
+   `[1,2,3,10,15]` -> `true`
 
-`[1,2,3,10,5]` -> `false`
+   `[1,2,3,10,5]` -> `false`
 
-Stwórz drugą wersję metody `boolean isSorted(List <String> ints, boolean ascending)`. 
-Metoda powinna zwracać `true` jeżeli elementy są posortowane rosnąco i parametr `ascending` to `true`. 
-Jeżeli ascending to `false`, to powinna zwracać `true` gry elementy maleją.
+    Stwórz drugą wersję metody `boolean isSorted(List <String> ints, boolean ascending)`. 
+    Metoda powinna zwracać `true` jeżeli elementy są posortowane rosnąco i parametr `ascending` to `true`. 
+    Jeżeli ascending to `false`, to powinna zwracać `true` gry elementy maleją.
 
-`[3,2,1], true -> false`
+    `[3,2,1], true -> false`
 
-`[1,2,3], true -> true`
+    `[1,2,3], true -> true`
 
-`[3,2,1], false -> false`
+    `[3,2,1], false -> false`
 
-`[1,2,3], false -> true`
+    `[1,2,3], false -> true`
 
 2. Stwórz metodę `intercalate`, która będzie otrzymywać listę elementów `int` oraz dodatkowy element typu `int`.
 Metoda ta ma zwrócić listę elementów listy przeplataną dodatkowym elementem:
 
-`[1,2,3]` oraz `5` -> `[1,5,2,5,3,5]`
+    `[1,2,3]` oraz `5` -> `[1,5,2,5,3,5]`
 
 3. Stwórz metodę `interleave`, która będzie otrzymywać 2 listy elementów `int` i połączy je ze sobą w taki sposób, że
 storzy listę zawierającą elementy każdej z nich na zmianę:
 
-`[1,2,3]`, `[11,12,13]` -> `[1,11,2,12,3,13]`
+    `[1,2,3]`, `[11,12,13]` -> `[1,11,2,12,3,13]`
 
 4. Stwórz metodę `boolean allNegative(List<Integer> elements)` zwracającą `true` tylko jeżeli wszystkie elementy listy są ujemne.
 
 5. Stwórz metodę `distinct` przyjmującą jako argument listę `int`. Metoda ta powinna zwrócić listę `int`, ale ominąć powtarzające się elementy:
 
-`[1,2,3,3] -> [1,2,3]`
+    `[1,2,3,3] -> [1,2,3]`
 
-`[4,4,4] -> [4]`
+    `[4,4,4] -> [4]`
 
 Funkcja powinna zachowywać kolejność liczb.
 
@@ -161,9 +161,9 @@ wskazanych przez `from` i `to`. Stwórz przeładowaną wersję dla listy.
 7. Stwórz metodę `showHistogram(String input)`, która będzie otrzymywać łańcuch tekstowy i będzie wyświetlać
 wszystkie znaki oraz ile razy występuję. Na przykład `showHistogram("aaabbbc")` powienien zwrócić:
 
-```
-a: 3, b: 3, c: 1
-```
+    ```
+    a: 3, b: 3, c: 1
+    ```
 
 *(Dodatkowo)* obok liczby występowań wyświetl w nawiasie procentową wartość udziału znaku w łańcuchu.
 
@@ -176,19 +176,19 @@ otrzymać jako parametr liczbę `limit` i powinna znaleźc wszystkie liczby pier
 
 1. Stwórz metodę `isPalindrome` sprawdzającą czy słowo jest palindromem:
 
-`kajak` -> `true`
-`kaja` -> `false`
+   `kajak` -> `true`
+   `kaja` -> `false`
 
 *(Dodatkowo)* Stwórz drugą wersję metody, która ignoruje spacje oraz wielkość liter podczas sprawdzania tekstu:
 
-`Kobyła ma mały bok` -> `true`
+   `Kobyła ma mały bok` -> `true`
 
 2. Stwórz metodę `unique` przyjmującą jako argument łańcuch tekstowy. Metoda ta powinna zwrócić również łańcuch tekstowy,
 ale powinna pomijać wszystkie wystepujące już znaki. Na przykład:
 
-`abcabcd` -> `abcd`
+   `abcabcd` -> `abcd`
 
-`aaaaaax` -> `ax`
+   `aaaaaax` -> `ax`
 
 3. Napisz program w klasie `ReadWords` wczytujący linie tekstu ze standardowego wejścia do listy aż do wpisania słowa `koniec`. Następnie program powinien wyświetlić je podzielone przecinkami pomijajac `koniec`. Na przykład: `Wczytano 3 słowa: Jaś, piłka, słowo.`. 
 Rozważ użycie metod `String.join` i `String.format`.
@@ -231,7 +231,7 @@ liczba jest zbyt mała lub zbyt duża.
 
 1. Napisz fukcję wyświetlającą godzinię na przykład `10:10:15` co 10 sekund.
 2. Napisz funkcję, która po otrzymaniu roku i miesiąca zwróci listę wszystkich dni danego miesiąca.
-3. Napisz funkcję `isAlmostTime` zwracającą true, jeżeli obecny czas jest z zakresie +/- 5 minut od podanego
+3. Napisz funkcję `isAlmostTime` zwracającą `true`, jeżeli obecny czas jest z zakresie +/- 5 minut od podanego
    w parametrze.
 4. Napisz funkcję, która zwraca liczbę dni do następnych urodzin podanych jako parametr.
 

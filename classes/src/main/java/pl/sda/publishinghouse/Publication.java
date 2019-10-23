@@ -18,10 +18,10 @@ package pl.sda.publishinghouse;
  * Dodaj nowy obiekt `PublishingHouse`. Zmodyfikuj aplikację tak, aby umożliwiała wybranie wydawnictwa do którego chcemy dodać wydawnictwa.
  * Dodaj do `PublishingHouse` metodę `avgPrice`, która będzie wyznaczała średnią cenę publikacji w wydawnictwie.
  * Stwórz interfejs `Downloadable`, który będzie zawierał metodę `String downloadUrl`. Zmodyfikuj
- * `BlogEntry` oraz `Ebook`, tak by go implementowały. CZy `Magazine` i `Book` powinny implementować `Downloadable`?
+ * `BlogEntry` oraz `Ebook`, tak by go implementowały. Czy `Magazine` i `Book` powinny implementować `Downloadable`?
  * Stwórz interfejs `Printable`, który będzie zawierał metodę `int pageNumber`. Zmodyfikuj `Book` i `Magazine`, tak by go implementowały.
  * Czy pozostałe klasy powinny go impementować?
- * Dodaj to `PublishingHouse` metodę `downloadUrls`, która zwróci wszyskie linki do publikacji online.
+ * Dodaj do `PublishingHouse` metodę `downloadUrls`, która zwróci wszyskie linki do publikacji online.
  * Zmodyfikuj `getPublications`, tak by zwracałą posortowaną listę publikacji od najstarszej.
  */
 public abstract class Publication implements Downloadable, Comparable<Publication> {
