@@ -4,45 +4,40 @@ import java.util.Scanner;
 
 public class ShapeApp {
 
-    static void displayShape(Shape shape) {
-        System.out.println("Pole figury to: " + shape.area() + ".");
-        System.out.println("Obwód figury to: " + shape.circuit() + ".");
-    }
-
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
-        Scanner scannner = new Scanner(System.in);
+        System.out.println("Podaj figurę [K,R,T,P]:");
+
+        String choice = scanner.nextLine();
 
         Shape shape = null;
 
-        while (shape == null) {
-            System.out.println("Jaką figurę chcesz wpisać? (R)omb, (T)rójkąt równoboczny, (K)wadrat, (P)rostokąt?");
-            String choice = scannner.next();
-
+        while(shape == null) {
             switch (choice) {
+                case "P":
+                    System.out.println("Wpisz długość boków:");
+                    shape = new Rectangle(scanner.nextDouble(), scanner.nextDouble());
+                    break;
                 case "K":
                     System.out.println("Wpisz długość boku:");
-                    shape = new Square(scannner.nextDouble());
+                    shape = new Square(scanner.nextDouble());
                     break;
                 case "T":
                     System.out.println("Wpisz długość boku:");
-                    shape = new EquilateralTriangle(scannner.nextDouble());
-                    break;
-                case "P":
-                    System.out.println("Wpisz długość boków:");
-                    shape = new Rectangle(scannner.nextDouble(), scannner.nextDouble());
+                    shape = new EquilateralTriangle(scanner.nextDouble());
                     break;
                 case "R":
                     System.out.println("Wpisz długość boku i wysokość:");
-                    shape = new Rhombus(scannner.nextDouble(), scannner.nextDouble());
+                    shape = new Rhombus(scanner.nextDouble(), scanner.nextDouble());
                     break;
                 default:
                     System.out.println("Nieznana figura.");
             }
         }
 
-        displayShape(shape);
-
+        shape.display();
 
     }
+
 }

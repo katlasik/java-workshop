@@ -1,23 +1,22 @@
 package pl.sda.shapes;
 
-public class Rhombus implements Shape{
+public class Rhombus extends Shape {
+    private double a;
+    private double h;
 
-    private final double a;
-    private final double h;
-
-    public Rhombus(double a, double h) {
+    protected Rhombus(double a, double h) {
+        super("Romb");
         this.a = a;
         this.h = h;
     }
 
-
     @Override
-    public double area() {
-        return a* h;
+    double area() {
+        return a * h;
     }
 
     @Override
-    public double circuit() {
-        return 4*a;
+    double circuit() {
+        return 4 * a;
     }
 }

@@ -1,20 +1,20 @@
 package pl.sda.shapes;
 
-public class EquilateralTriangle implements Shape{
+public class EquilateralTriangle extends Shape {
+    private double a;
 
-    private final double a;
-
-    public EquilateralTriangle(double a) {
+    protected EquilateralTriangle(double a) {
+        super("Równoboczny trójkąt");
         this.a = a;
     }
 
     @Override
-    public double area() {
-        return a * a * 0.433;
+    double area() {
+        return 0.433 * a * a;
     }
 
     @Override
-    public double circuit() {
-        return 3*a;
+    double circuit() {
+        return 3 * a;
     }
 }
