@@ -8,7 +8,8 @@ package pl.sda.space;
  * Stwórz mutowalną, następnie niemutowalną wersję.
  * Stwórz klasę `StellarSystem`, która powinna mieć możliwość posiadania planet.
  * Dodaj do klasy `StellarSystem` metodę `moons`, która będzie zwracała listę księżyców wszystkich planet.
- * Zaimplementuj interfejs `Comparable` dla stellar, porównujący je według rozmiaru.
+ * Zaimplementuj interfejs `Comparable` dla stellar, porównujący je według rozmiaru. Następnie posortuj księżyce za pomocą
+ * metody `Collections.sort`.
  */
 
 public abstract class Stellar {
