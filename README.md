@@ -5,11 +5,16 @@
 3. Po otwarciu projektu klikamy `Add as Maven Project` w prawy dolnym rogu.
 4. Jeżeli pojawi się komunikat `Project's SDK is not defined` to wybieramy wersję Javy.
 
+## Odpowiedzi
+
+Odpowiedzi do zadań znajdują się pod poniższym [linkiem](https://github.com/katlasik/java-workshop/tree/solutions). 
+Aby znaleźć odpowiedź na zadanie należy wejść na odpowiadającą mu sciężkę.
+
 ## Zadania
 
 ### Programowanie obiektowe
 
-1. * Stwórz klasę `User`, zawierającą pola typu `String` `password`, `username` oraz `secret`. Stwórz dla niej konstruktor oraz metody dostępowe. Stwórz konstruktor, który ustawia tylk `username` i `password`, a dla `secret` ustawia *"---"*.
+1. * Stwórz klasę `User`, zawierającą pola typu `String` `password`, `username` oraz `secret`. Stwórz dla niej metody dostępowe. Stwórz konstruktor, który ustawia tylko `username` i `password`, a dla `secret` ustawia *"---"* oraz drugi, który ustawia wszystkie pola.
    * Do klasy `User` dodaj metodę `boolean authenticate(String username, String password)`. Metoda powinna zwrócić `true` w przypadku, gdy zostanie wywołana z hasłem i nazwą użytkownika zgadzającą się z tymi przechowywanumi w obiekcie.  Dodaj także drugą metodę `boolean authenticate(String secret)`, która zwróci `true`, gdy podany parametr jest taki sam jak w polu `secret`, ale nigdy gdy pole `secret` zawiera *"---"*.
    * Stwórz klasę `LoginApp`. Dodaj do niej statyczne pole-tablicę zawierającą 5 obiektów `user`.
    * Dodaj metodę `main`, która wyświetli komunikat dla użytkownika by wpisał login i hasło oraz wczyta te dane. Następnie przeszukaj tablicę obiektów szukając użytkownika, którego metoda `authenticate` zwróci `true` dla pary nazwa użytkownika-hasło.
@@ -20,12 +25,20 @@
 
 2. * Stwórz 4 klasy `Square`, `Rectangle`, `EquilateralTriangle` i `Rhombus`. Każda z tych klas ma przechowywać w sobie informację potrzebne do obliczenia jej pola oraz obwodu. Oznacza to też, że każda z tych klas powinna mieć w sobie metody
      `area` oraz `circuit` obliczające pole i obwód.
+     
+     | Figura              | Pole      | Obwód     |
+     |---------------------|-----------|-----------|
+     | Kwadrat             | 4*a       | a*a       |
+     | Prostokąt           | a*b       | 2*a + 2*b |
+     | Trójkąt równoboczny | 0.433*a*a | 3*a       |
+     | Romb                | a*h       | 4*a       |
+     
    * Stwórz klasę abstraktycjną `Shape` po której będzie dziedziczyć, każda z tych klas. Klasa abstrakcyjna powinna zawierać abstrakcyjne metody `area` oraz `circuit`. Powinna zawierać też pole `name`, zawierające nazwę figury. Każda z dziedziczących figur powinna ustawiać to pole w konstruktorze.
    * Stwórz metodę `display` w klasie `Shape`, tak by wyświetlała łańcuch zawierający nazwę figury, jej obwód oraz pole. Na przykład: *"Kwadrat, pole = 4, obwód = 8"*.
    * Dodaj klasę `ShapeApp` oraz metodę `main`, w której będzie można zapytać użytkownika jaką figurę chce wpisać, 
      a następnie wczytać potrzebne dane i wywołać `display`.
    * Stwórz interfejs `HasColor`, posiadający pojedyńczą metodę `String color()` i zaimplementuj go w klasie `Square`. Stwórz też klasę
-   `Cat`, która rówież implementuje ten interfejs.  Następnie dodaj dodatkową klasę `ColorApp`, która będzie zawierać statyczne pole z tablicą o typie `HasColor[]`, które zawierają instancje klas `Cat` i `Square`. Następnie dodaj metodę `main`, która iteruje po tej tablicy oraz wyświetla kolory obiektów.
+     `Cat`, która rówież implementuje ten interfejs.  Następnie dodaj dodatkową klasę `ColorApp`, która będzie zawierać statyczne pole z tablicą o typie `HasColor[]`, które zawierają instancje klas `Cat` i `Square`. Następnie dodaj metodę `main`, która iteruje po tej tablicy oraz wyświetla kolory obiektów.
      
 3. * Stwórz klasę abstakcyjną `Publication`, zawierająca pola `author`, `year` oraz `price` i metody dostępowe do niej.
      Stwórz konstruktor ustawiający te pola. Stwórz konstruktor, który ustawia tylko rok, a nazwę autora ustawia na *"nieznany"*.
@@ -87,7 +100,8 @@
    * Stwórz mutowalną, następnie niemutowalną wersję.
    * Stwórz klasę `StellarSystem`, która powinna mieć możliwość posiadania planet.
    * Dodaj do klasy `StellarSystem` metodę `moons`, która będzie zwracała listę księżyców wszystkich planet.
-   * Zaimplementuj interfejs `Comparable` dla `Stellar`, porównujący je według rozmiaru.
+   * Zaimplementuj interfejs `Comparable` dla `Stellar`, porównujący je według rozmiaru.  
+     Następnie posortuj księżyce za pomocą metody `Collections.sort`.
 
 7. Stwórz interfejs `NumberConverter` posiadającą jedna metodę: `String convert(String number)`
    * Stwórz klasę `MorseNumberConverter`, która zamienia liczbę na reprezentację w kodzie Morse'a.
@@ -108,6 +122,13 @@
    Jeżeli zostanie podany do niej łańcuch *"hex"* powinna wrócić implementację `HexNumberConverter`,
    a jeżeli *"morse"*, to `MorseNumberConverter`. Jeżeli zostanie podany inny łańcuch, to
    powinna zostać zwrócona implementacja `NumberConverter`, która zwraca ten sam łańcuch `("test" -> "test")`.
+   * Dodaj nastęjące stałe do interfejsu `NumberConverter`:
+     ```java
+     String ANSI_RESET = "\u001B[0m";
+     String ANSI_CYAN = "\u001B[36m";
+     ```
+   * Zmodyfikuj tak, by każda z implementacji konwertera zwracała pokolorowany tekst. Aby tego dokonać doklejaj stałą `ANSI_CYAN` na początek
+     każdego z wynikowych łańcuchów i `ANSI_RESET` na koniec. 
    
 8. * Stwórz metodę `modifyUpperCase`, która będzie otrzymywać listę łańcuchów znaków oraz liczbę (indeks elementu). Gdy indeks nie będzie wskazywał na żaden element, to zgłoś `IllegalArgumentException`. 
      W przypadku gdy zostanie podany poprawny indeks to zmień wszystkie znaki we wskazanym łańcuchu na wielkie litery, a resztę pozostaw niezmienioną. Na przykład:
@@ -255,7 +276,17 @@ na pustej liście rzuć wyjątek `IllegalStateException`.
 
 ### Wyjątki
 
-1. Napisz metodę `checkNull` rzucającą wyjątek `NullPointerException`, gdy argument jest równy `null`.
+1. * Napisz metodę `checkNull` rzucającą wyjątek `NullPointerException`, gdy argument jest równy `null`.
+   * Napisz następnie metodę `checkSize` sprawdzającą czy podany łańcuch znaków ma długość dłuższą lub równą od 2 znaków i krótszą lub równą od 15.
+     Jeżeli rozmiar jest nieprawidłowy to zgłoś wyjątek `IllegalArgumentException` z wiadomością 
+     *"Tekst musi mieć od 2 do 15 znaków, a ma X znaków"*, gdzie X to rzeczywisty rozmiar tekstu.
+   * Dodaj metodę `validate`, przyjmującą łańcuch znaków i zwracającą `boolean`. Ta metoda powinna wywołać metody
+     `checkNull` oraz `checkSize`. Jeżeli nie zostanie z nich rzucony żaden wyjątek, to metoda
+     powinna zwrócić `true`, jeżeli zostanie rzucony jakikolwiek wyjątek, to powinien zostać wypisany
+     za pomocą `System.err.println`, a metoda powinna zwrócić `false`.
+   * Napisz metodę `main` w której przetestujesz jak zachowuje się metoda `validate` dla prawidłowych
+     wartości, jak *"Test"* oraz nieprawidłowych jak `null` lub *"x"* albo *"xxxxxxxxxxxxxxxxx"*.
+       
 2. Napisz metodę `tryParse` parsująca liczbę ze łańcucha znaków, używajac `Integer.parse`. W przypadku nieudanej konwersji rzuć wyjątek `IllegalArgumentException` podając stary wyjątek jako parametr oraz przekaż wiadomość "Nieprawidłowa liczba".
 3. Napisz własny wyjątek `OddSizeException`. Zdefiniuj dla niego wszystkie konstruktory z klasy bazowej.
 Napisz metodę `checkList` wyrzucającą go, jeżeli liczba elementów jest nieparzysta.
