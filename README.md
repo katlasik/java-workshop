@@ -14,7 +14,7 @@
    * Stwórz klasę `LoginApp`. Dodaj do niej statyczne pole-tablicę zawierającą 5 obiektów `user`.
    * Dodaj metodę `main`, która wyświetli komunikat dla użytkownika by wpisał login i hasło oraz wczyta te dane. Następnie przeszukaj tablicę obiektów szukając użytkownika, którego metoda `authenticate` zwróci `true` dla pary nazwa użytkownika-hasło.
    * Jeżeli znajdziesz pasujący obiekt, to wyświetl komunikat *"Witaj <nazwa użytkownika>!"* i zakończ program. Jeżeli nie uda się znaleźć pasującego obiektu, to poinformuj użytkownika i ponownie wyświetl komunikat z prośbą o wpisanie hasła.
-   * (Opcjonalnie) * Dodaj możliwość wyboru zalogowania się poprzez tajny token.
+   * *(Opcjonalnie)* Dodaj możliwość wyboru zalogowania się poprzez tajny token.
 
 2. * Stwórz 4 klasy `Square`, `Rectangle`, `EquilateralTriangleSh` i `Rhombus`. Każda z tych klas ma przechowywać w sobie informację potrzebne do obliczenia jej pola oraz obwodu. Oznacza to też, że każda z tych klas powinna mieć w sobie metody
      `area` oraz `circuit` obliczające pole i obwód.
