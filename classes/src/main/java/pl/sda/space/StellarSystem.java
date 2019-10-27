@@ -5,24 +5,26 @@ import java.util.List;
 
 public class StellarSystem {
 
-    private final List<Planet> planets;
+    private List<Planet> planets = new ArrayList<>();
 
-    public StellarSystem(List<Planet> planets) {
-        this.planets = planets;
+    void addPlanets(Planet... planets) {
+        for(Planet planet: planets) {
+            this.planets.add(planet);
+        }
     }
 
     public List<Planet> getPlanets() {
         return planets;
     }
 
-    public List<Moon> getMoons() {
-        ArrayList<Moon> moons = new ArrayList<>();
+    List<Moon> moons() {
+        ArrayList<Moon> result = new ArrayList<>();
 
         for(Planet p: planets) {
-            moons.addAll(p.getMoons());
+            result.addAll(p.getMoons());
         }
 
-        return moons;
-
+        return result;
     }
+
 }

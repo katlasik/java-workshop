@@ -100,7 +100,8 @@ Aby znaleźć odpowiedź na zadanie należy wejść na odpowiadającą mu scię�
    * Stwórz mutowalną, następnie niemutowalną wersję.
    * Stwórz klasę `StellarSystem`, która powinna mieć możliwość posiadania planet.
    * Dodaj do klasy `StellarSystem` metodę `moons`, która będzie zwracała listę księżyców wszystkich planet.
-   * Zaimplementuj interfejs `Comparable` dla `Stellar`, porównujący je według rozmiaru.
+   * Zaimplementuj interfejs `Comparable` dla `Stellar`, porównujący je według rozmiaru.  
+     Następnie posortuj księżyce za pomocą metody `Collections.sort`.
 
 7. Stwórz interfejs `NumberConverter` posiadającą jedna metodę: `String convert(String number)`
    * Stwórz klasę `MorseNumberConverter`, która zamienia liczbę na reprezentację w kodzie Morse'a.
