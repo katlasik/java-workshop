@@ -122,6 +122,13 @@ Aby znaleźć odpowiedź na zadanie należy wejść na odpowiadającą mu scię�
    Jeżeli zostanie podany do niej łańcuch *"hex"* powinna wrócić implementację `HexNumberConverter`,
    a jeżeli *"morse"*, to `MorseNumberConverter`. Jeżeli zostanie podany inny łańcuch, to
    powinna zostać zwrócona implementacja `NumberConverter`, która zwraca ten sam łańcuch `("test" -> "test")`.
+   * Dodaj nastęjące stałe do interfejsu `NumberConverter`:
+     ```java
+     String ANSI_RESET = "\u001B[0m";
+     String ANSI_CYAN = "\u001B[36m";
+     ```
+   * Zmodyfikuj tak, by każda z implementacji konwertera zwracała pokolorowany tekst. Aby tego dokonać doklejaj stałą `ANSI_CYAN` na początek
+     każdego z wynikowych łańcuchów i `ANSI_RESET` na koniec. 
    
 8. * Stwórz metodę `modifyUpperCase`, która będzie otrzymywać listę łańcuchów znaków oraz liczbę (indeks elementu). Gdy indeks nie będzie wskazywał na żaden element, to zgłoś `IllegalArgumentException`. 
      W przypadku gdy zostanie podany poprawny indeks to zmień wszystkie znaki we wskazanym łańcuchu na wielkie litery, a resztę pozostaw niezmienioną. Na przykład:

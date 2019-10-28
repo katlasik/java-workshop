@@ -23,5 +23,12 @@ package pl.sda.numberconverter;
  */
 
 public interface NumberConverter {
+    String ANSI_RESET = "\u001B[0m";
+    String ANSI_CYAN = "\u001B[36m";
+
+    default String color(String text) {
+        return ANSI_CYAN + text + ANSI_RESET;
+    }
+
     String convert(Integer number);
 }

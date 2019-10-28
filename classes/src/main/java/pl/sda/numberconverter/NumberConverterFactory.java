@@ -8,7 +8,12 @@ public class NumberConverterFactory {
         } else if(type.equals("morse")) {
             return new MorseCodeNumberConverter();
         } else {
-            return i -> i.toString();
+            return new NumberConverter() {
+                @Override
+                public String convert(Integer number) {
+                    return color(number.toString());
+                }
+            };
         }
      }
 

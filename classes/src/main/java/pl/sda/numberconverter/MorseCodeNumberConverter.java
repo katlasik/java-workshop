@@ -24,6 +24,6 @@ public class MorseCodeNumberConverter implements NumberConverter {
         for (char c: number.toString().toCharArray()) {
             result += DICT.get(c) + " ";
         }
-        return result;
+        return color(result);
     }
 }
