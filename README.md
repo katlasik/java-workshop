@@ -122,6 +122,13 @@ Aby znaleźć odpowiedź na zadanie należy wejść na odpowiadającą mu scię�
    Jeżeli zostanie podany do niej łańcuch *"hex"* powinna wrócić implementację `HexNumberConverter`,
    a jeżeli *"morse"*, to `MorseNumberConverter`. Jeżeli zostanie podany inny łańcuch, to
    powinna zostać zwrócona implementacja `NumberConverter`, która zwraca ten sam łańcuch `("test" -> "test")`.
+   * Dodaj nastęjące stałe do interfejsu `NumberConverter`:
+     ```java
+     String ANSI_RESET = "\u001B[0m";
+     String ANSI_CYAN = "\u001B[36m";
+     ```
+   * Zmodyfikuj tak, by każda z implementacji konwertera zwracała pokolorowany tekst. Aby tego dokonać doklejaj stałą `ANSI_CYAN` na początek
+     każdego z wynikowych łańcuchów i `ANSI_RESET` na koniec. 
    
 8. * Stwórz metodę `modifyUpperCase`, która będzie otrzymywać listę łańcuchów znaków oraz liczbę (indeks elementu). Gdy indeks nie będzie wskazywał na żaden element, to zgłoś `IllegalArgumentException`. 
      W przypadku gdy zostanie podany poprawny indeks to zmień wszystkie znaki we wskazanym łańcuchu na wielkie litery, a resztę pozostaw niezmienioną. Na przykład:
@@ -339,3 +346,24 @@ licznika o `1`, a natępnie powtórzenie operacji aż do osiągnięcia `0`. Inny
 
 Zaimplementuj wszystkie metody w klasach `Matches`, `Find`, `Replace`, `Split` oraz `FindGroups`, tak by testy kończyły się powodzeniem.
 
+### BigDecimal i BigInteger
+
+1. Stwórz aplikację wczytującą liczbę od użytkownika i obliczającą silnie. Aplikacja powinna być odporna na przekraczanie zakresu.
+
+2. Stwórz aplikację wczytującą dowolną liczbę ułamkową oraz liczbę całkowitą, następnie zaookrągl liczbę ułamkową do precyzji przekazanej
+jako drugi argument i wyświetl.
+
+### Strumienie
+
+* Zwróć set zawierający wszystkich użytkowników.
+* Znajdź wszystkich użytkowników, których imię zaczyna się od prefiksu. Użyj funkcji `String.startsWith`.
+* Znajdź największy wiek użytkownika.
+* Zwróć listę unikalnych wartości wieku użytkowników.
+* Wyszukaj pierwszego użytkownika po podanym adresie email.
+* Zwróć listę imion użytkowników.
+* Zwróć listę imion i nazwisk (połączonych jako jeden łańcuch) użytkowników z literami zamienionymi na duże.
+* Zwróc wszystkich użytkowników starszych niż wiek podany jako parametr.
+* Zwróć imiona wszystkich użytkowników podzielone przecinkami ako jeden łańcuch znaków.
+* Zwróć listę wszystkich użytkowników limitowaną do ilości podanej jako parametr.
+* Zwróć mapę użytkowników pogrupowanych według wieku.
+* Zwróć mapę wszystkich użytkowników pogrupowanych według domeny ich emaili (domena to adres po @).

@@ -21,6 +21,8 @@
         <module>varargs</module>
         <module>generics</module>
         <module>enums</module>
+        <module>streams</module>
+        <module>biginteger</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
