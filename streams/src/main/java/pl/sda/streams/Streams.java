@@ -8,13 +8,14 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
-public class Streams {
+class Streams {
 
     private final Repository repository = new Repository();
 
     /**
-     * Zwróć set zawierający wszystkich użytkowników.
+     * Zwróć set zawierający wszystkich użytkowników korzystając z metody **repository.getUsers**.
      */
     Set<User> findAllUsers() {
         return repository.getUsers().collect(Collectors.toSet());
@@ -32,21 +33,21 @@ public class Streams {
      * Znajdź największy wiek użytkownika. Jeżeli nie zostaną podani żadni użytkownicy, to zwróć 0.
      */
     int findMaxAge() {
-        return repository.getUsers().map(u -> u.getAge()).max(Integer::compareTo).orElse(0);
+        return repository.getUsers().map(User::getAge).max(Integer::compareTo).orElse(0);
     }
 
     /**
      * Zwróć posortowaną listę unikalnych wartości wieku użytkowników.
      */
     List<Integer> findAges() {
-        return repository.getUsers().map(u -> u.getAge()).distinct().sorted().collect(Collectors.toList());
+        return repository.getUsers().map(User::getAge).distinct().sorted().collect(Collectors.toList());
     }
 
     /**
      * Zwróć listę imion użytkowników.
      */
     List<String> allFirstNames() {
-        return repository.getUsers().map(u -> u.getFirstName()).collect(Collectors.toList());
+        return repository.getUsers().map(User::getFirstName).collect(Collectors.toList());
     }
 
     /**
@@ -60,22 +61,22 @@ public class Streams {
     /**
      * Zwróć listę imion i nazwisk (połączonych jako jeden łańcuch, ze spacją jako separatorem) użytkowników z literami zamienionymi na duże.
      */
-    List<String> allNamesUppercased() {
-        return repository.getUsers().map(u -> u.getFirstName() + " " + u.getLastName()).map(s -> s.toUpperCase()).collect(Collectors.toList());
+    Stream<String> allNamesUppercased() {
+        return repository.getUsers().map(u -> u.getFirstName() + " " + u.getLastName()).map(String::toUpperCase);
     }
 
     /**
      * Zwróc wszystkich użytkowników starszych niż wiek podany jako parametr.
      */
-    List<User> findAllOlderThan(int age) {
-        return repository.getUsers().filter(u -> u.getAge() > age).collect(Collectors.toList());
+    Stream<User> findAllOlderThan(int age) {
+        return repository.getUsers().filter(u -> u.getAge() > age);
     }
 
     /**
      * Zwróć imiona wszystkich użytkowników podzielone przecinkami ako jeden łańcuch znaków.
      */
     String joined() {
-        return repository.getUsers().map(u -> u.getFirstName()).collect(Collectors.joining(","));
+        return repository.getUsers().map(User::getFirstName).collect(Collectors.joining(","));
     }
 
     /**
@@ -89,7 +90,7 @@ public class Streams {
      * Zwróć mapę użytkowników pogrupowanych według wieku.
      */
     Map<Integer, List<User>> groupByAge() {
-        return repository.getUsers().collect(Collectors.groupingBy(u -> u.getAge()));
+        return repository.getUsers().collect(Collectors.groupingBy(User::getAge));
     }
 
     /**
@@ -99,7 +100,28 @@ public class Streams {
         return repository.getUsers().collect(Collectors.groupingBy(u -> u.getEmail().split("@")[1]));
     }
 
+    /**
+     * Zwróć listę tytułów wszystkich maili wszystkich użytkowników korzystając z metody **repository.getMessageTitles**.
+     */
+    Stream<String> getAllMessageTitles() {
+        return repository.getUsers().flatMap(u -> repository.getMessageTitles(u.getEmail()));
+    }
 
+    /**
+     * Zróć listę łańcuchów znaków zawierającą email oraz tytuł wiadomości, na przykład:
+     * 'email@gmail.com - Promocja!' ale tylko jeżeli domena emaila zgadza się z podaną w parametrze.
+     * Dla domen różych od parametru, zwróć pojedyńczą wartość: 'email@wp.pl - Brak wiadomości'.
+     *
+     * */
+    Stream<String> getAllMessageTitlesOfDomain(String domain) {
+        return repository.getUsers().flatMap(u -> {
+            if(u.getEmail().split("@")[1].equals(domain)) {
+                return repository.getMessageTitles(u.getEmail()).map(t -> u.getEmail() + " - " + t);
+            } else {
+                return Stream.of(u.getEmail() + " - " + "Brak wiadomości");
+            }
+        });
+    }
 
 
 
