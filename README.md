@@ -348,9 +348,9 @@ Zaimplementuj wszystkie metody w klasach `Matches`, `Find`, `Replace`, `Split` o
 
 ### BigDecimal i BigInteger
 
-1. Stwórz aplikację wczytującą liczbę od użytkownika i obliczającą liczbę. Aplikacja powinna być odporna na przekraczanie zakresu.
+1. Stwórz aplikację wczytującą liczbę od użytkownika i obliczającą silnie. Aplikacja powinna być odporna na przekraczanie zakresu.
 
-2. Stwórz apliakcję wczytującą dowolną liczbę ułamkową oraz liczbę całkowitą, następnie zaookrągl liczbę ułamkową do precyzji przekazanej
+2. Stwórz aplikację wczytującą dowolną liczbę ułamkową oraz liczbę całkowitą, następnie zaookrągl liczbę ułamkową do precyzji przekazanej
 jako drugi argument i wyświetl.
 
 ### Strumienie
