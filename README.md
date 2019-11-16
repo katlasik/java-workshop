@@ -274,6 +274,13 @@ na pustej liście rzuć wyjątek `IllegalStateException`.
 3. Zmodyfikuj metodę `pickRandom`, `intercalate`, `intersperse` tak, by działały na dowolnych typach. 
    Zastanów się czy można zmodyfikować także inne metody by były generyczne.
 
+4. Stwórz generyczną metodę `all`, która przyjmie jako argumenty kolekcję oraz `Predicate`.
+   Jeżeli wywowłanie `Predicate.test` dla wszystkich wartości zwróci `true`, to funkcja powinna
+   zwrócić `true`, a innym przypadku `false`.
+   
+   Stwórz analogiczną metodę `any`, która zwróci `true` jeżeli `Predicate.test` zwróci choć raz `true`.
+
+
 ### Wyjątki
 
 1. * Napisz metodę `checkNull` rzucającą wyjątek `NullPointerException`, gdy argument jest równy `null`.
@@ -304,7 +311,13 @@ Napisz metodę `checkList` wyrzucającą go, jeżeli liczba elementów jest niep
 1. * Stwórz typ wyliczeniowy `Color`.
    * Dodaj kolory, takie jak `BLACK`, `RED`, `YELLOW`.
    * Dodaj do niego metode `String getHex()` zwracającą heksadecymalną reprezentację koloru.
-
+        
+        | Kolor               | Hex       |
+        |---------------------|-----------|
+        | YELLOW              | #ffff00   |
+        | RED                 | #ff0000   |
+        | BLACK               | #000000   |
+        
 2. * Stwórz typ wyliczeniowy `DayOfWeek` zawierający nazwy dni tygodnia.
    * Dodaj do enumeracji pole zwracające skróconą nazwę, dnia np, `Tue`.
    * Dodaj do enumeracji metodę `isWeekend` zwracającą `true` dla soboty i niedzieli.
