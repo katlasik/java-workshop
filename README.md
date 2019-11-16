@@ -346,3 +346,24 @@ licznika o `1`, a natępnie powtórzenie operacji aż do osiągnięcia `0`. Inny
 
 Zaimplementuj wszystkie metody w klasach `Matches`, `Find`, `Replace`, `Split` oraz `FindGroups`, tak by testy kończyły się powodzeniem.
 
+### BigDecimal i BigInteger
+
+1. Stwórz aplikację wczytującą liczbę od użytkownika i obliczającą liczbę. Aplikacja powinna być odporna na przekraczanie zakresu.
+
+2. Stwórz apliakcję wczytującą dowolną liczbę ułamkową oraz liczbę całkowitą, następnie zaookrągl liczbę ułamkową do precyzji przekazanej
+jako drugi argument i wyświetl.
+
+### Strumienie
+
+* Zwróć set zawierający wszystkich użytkowników.
+* Znajdź wszystkich użytkowników, których imię zaczyna się od prefiksu. Użyj funkcji `String.startsWith`.
+* Znajdź największy wiek użytkownika.
+* Zwróć listę unikalnych wartości wieku użytkowników.
+* Wyszukaj pierwszego użytkownika po podanym adresie email.
+* Zwróć listę imion użytkowników.
+* Zwróć listę imion i nazwisk (połączonych jako jeden łańcuch) użytkowników z literami zamienionymi na duże.
+* Zwróc wszystkich użytkowników starszych niż wiek podany jako parametr.
+* Zwróć imiona wszystkich użytkowników podzielone przecinkami ako jeden łańcuch znaków.
+* Zwróć listę wszystkich użytkowników limitowaną do ilości podanej jako parametr.
+* Zwróć mapę użytkowników pogrupowanych według wieku.
+* Zwróć mapę wszystkich użytkowników pogrupowanych według domeny ich emaili (domena to adres po @).
