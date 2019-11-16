@@ -355,7 +355,7 @@ jako drugi argument i wyświetl.
 
 ### Strumienie
 
-* Zwróć set zawierający wszystkich użytkowników.
+* Zwróć set zawierający wszystkich użytkowników korzystając z metody **repository.getUsers**.
 * Znajdź wszystkich użytkowników, których imię zaczyna się od prefiksu. Użyj funkcji `String.startsWith`.
 * Znajdź największy wiek użytkownika.
 * Zwróć listę unikalnych wartości wieku użytkowników.
@@ -367,3 +367,6 @@ jako drugi argument i wyświetl.
 * Zwróć listę wszystkich użytkowników limitowaną do ilości podanej jako parametr.
 * Zwróć mapę użytkowników pogrupowanych według wieku.
 * Zwróć mapę wszystkich użytkowników pogrupowanych według domeny ich emaili (domena to adres po @).
+* Zwróć listę tytułów wszystkich maili wszystkich użytkowników korzystając z metody **repository.getMessageTitles**.
+* Zróć listę łańcuchów znaków zawierającą email oraz tytuł wiadomości, na przykład: *'email@gmail.com - Promocja!'* ale tylko jeżeli domena emaila zgadza się z podaną w parametrze.
+  Dla domen różych od parametru, zróć pojedyńczą wartość: *'email@wp.pl - Brak wiadomości'*.

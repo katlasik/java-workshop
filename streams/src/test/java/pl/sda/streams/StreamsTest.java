@@ -5,6 +5,7 @@ import pl.sda.streams.internal.User;
 
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -133,5 +134,49 @@ class StreamsTest {
                         "adres.pl", List.of(new User("Roman", "Kozielski", 20, "rkoz@adres.pl"))
                 ).entrySet()
         );
+    }
+
+    @Test
+    void getAllMessageTitles() {
+        assertThat(streams.getAllMessageTitles().collect(Collectors.toList()))
+                .containsOnly(
+                        "Kup mleko.",
+                        "Jak się masz?",
+                        "Faktura VAT",
+                        "Twoja rezerwacja została potwierdzona",
+                        "Oferta pracy",
+                        "Promocja",
+                        "Otrzymaj 100 złotych losów",
+                        "Twoja subskrypcja wygasła",
+                        "Zaproszenie",
+                        "Oferta kupna"
+                );
+    }
+
+
+    @Test
+    void getAllMessageTitlesOfDomain() {
+        assertThat(streams.getAllMessageTitlesOfDomain("gmail.com"))
+                .containsOnly(
+                        "rkoz@adres.pl - Brak wiadomości",
+                        "dg@wb.pl - Brak wiadomości",
+                        "bartek@kozlarz.pl - Brak wiadomości",
+                        "nit@wb.pl - Brak wiadomości",
+                        "aw@gmail.com - Twoja subskrypcja wygasła",
+                        "ww@gmail.com - Zaproszenie",
+                        "ww@gmail.com - Oferta kupna"
+                );
+
+        assertThat(streams.getAllMessageTitlesOfDomain("adres.pl"))
+                .containsOnly(
+                        "rkoz@adres.pl - Kup mleko.",
+                        "rkoz@adres.pl - Jak się masz?",
+                        "dg@wb.pl - Brak wiadomości",
+                        "bartek@kozlarz.pl - Brak wiadomości",
+                        "nit@wb.pl - Brak wiadomości",
+                        "aw@gmail.com - Brak wiadomości",
+                        "ww@gmail.com - Brak wiadomości"
+                );
+
     }
 }

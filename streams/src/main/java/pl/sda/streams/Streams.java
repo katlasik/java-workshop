@@ -8,13 +8,14 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
-public class Streams {
+class Streams {
 
     private final Repository repository = new Repository();
 
     /**
-     * Zwróć set zawierający wszystkich użytkowników.
+     * Zwróć set zawierający wszystkich użytkowników korzystając z metody **repository.getUsers**.
      */
     Set<User> findAllUsers() {
         return null;
@@ -60,14 +61,14 @@ public class Streams {
     /**
      * Zwróć listę imion i nazwisk (połączonych jako jeden łańcuch, ze spacją jako separatorem) użytkowników z literami zamienionymi na duże.
      */
-    List<String> allNamesUppercased() {
+    Stream<String> allNamesUppercased() {
         return null;
     }
 
     /**
      * Zwróc wszystkich użytkowników starszych niż wiek podany jako parametr.
      */
-    List<User> findAllOlderThan(int age) {
+    Stream<User> findAllOlderThan(int age) {
         return null;
     }
 
@@ -99,7 +100,22 @@ public class Streams {
         return null;
     }
 
+    /**
+     * Zwróć listę tytułów wszystkich maili wszystkich użytkowników korzystając z metody **repository.getMessageTitles**.
+     */
+    Stream<String> getAllMessageTitles() {
+        return null;
+    }
 
+    /**
+     * Zróć listę łańcuchów znaków zawierającą email oraz tytuł wiadomości, na przykład:
+     * 'email@gmail.com - Promocja!' ale tylko jeżeli domena emaila zgadza się z podaną w parametrze.
+     * Dla domen różych od parametru, zwróć pojedyńczą wartość: 'email@wp.pl - Brak wiadomości'.
+     *
+     * */
+    Stream<String> getAllMessageTitlesOfDomain(String domain) {
+        return null;
+    }
 
 
 

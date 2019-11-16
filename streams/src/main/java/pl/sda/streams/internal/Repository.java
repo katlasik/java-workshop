@@ -14,4 +14,20 @@ public class Repository {
                 new User("Wojciech", "Więcławek", 34, "ww@gmail.com")
         );
     }
+
+    public Stream<String> getMessageTitles(String email) {
+
+        switch(email) {
+            case "rkoz@adres.pl": return Stream.of("Kup mleko.", "Jak się masz?");
+            case "dg@wb.pl": return Stream.of("Faktura VAT", "Twoja rezerwacja została potwierdzona");
+            case "bartek@kozlarz.pl": return Stream.of("Oferta pracy", "Promocja");
+            case "nit@wb.pl": return Stream.of("Otrzymaj 100 złotych losów");
+            case "aw@gmail.com": return Stream.of("Twoja subskrypcja wygasła");
+            case "ww@gmail.com": return Stream.of("Zaproszenie", "Oferta kupna");
+            default: return Stream.empty();
+        }
+
+    }
+
+
 }
