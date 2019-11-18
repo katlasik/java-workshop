@@ -1,0 +1,19 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: maven
+    steps:
+      - checkout
+      - restore_cache:
+          key: java-workshop-{{ checksum "pom.xml" }}
+      - run: mvn dependency:go-offline
+      - save_cache:
+          paths:
+            - ~/.m2
+          key: java-workshop-{{ checksum "pom.xml" }}
+      - run: mvn compile
+      - run: |
+          if [ "$CIRCLE_BRANCH" = "solutions" ]; then
+              mvn test
+          fi
