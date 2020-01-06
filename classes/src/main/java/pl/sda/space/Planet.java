@@ -11,8 +11,8 @@ public class Planet extends Stellar {
         super(name, radius, mass);
     }
 
-    void addMoon(Moon ...moons) {
-        for (Moon moon :moons) {
+    void addMoon(Moon... moons) {
+        for (Moon moon : moons) {
             this.moons.add(moon);
         }
     }

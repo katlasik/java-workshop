@@ -4,7 +4,7 @@
  * o 1, a natępnie powtórzenie operacji aż do osiągnięcia 0. Innymi słowy należe odliczyć od n do 0.
  */
 
-class DownCounter implements Runnable{
+class DownCounter implements Runnable {
 
     private int n;
 
@@ -14,7 +14,7 @@ class DownCounter implements Runnable{
 
     @Override
     public void run() {
-        while(n > 0) {
+        while (n > 0) {
             try {
                 Thread.sleep(1_000);
             } catch (InterruptedException e) {
@@ -29,7 +29,7 @@ class DownCounter implements Runnable{
 public class CountDownThread {
 
     public static void main(String[] args) {
-        System.out.println("Witaj z głównego wątku:"+ Thread.currentThread().getName() +".");
+        System.out.println("Witaj z głównego wątku:" + Thread.currentThread().getName() + ".");
         new Thread(new DownCounter(10)).start();
         new Thread(new DownCounter(10)).start();
         new Thread(new DownCounter(10)).start();

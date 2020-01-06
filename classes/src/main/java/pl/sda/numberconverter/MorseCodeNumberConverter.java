@@ -21,7 +21,7 @@ public class MorseCodeNumberConverter implements NumberConverter {
     public String convert(Integer number) {
 
         String result = "";
-        for (char c: number.toString().toCharArray()) {
+        for (char c : number.toString().toCharArray()) {
             result += DICT.get(c) + " ";
         }
         return color(result);

@@ -36,8 +36,8 @@ public class ReadPeopleExercise {
         }
 
 
-        for(Map.Entry<String, String> person: people.entrySet()) {
-            System.out.println(person.getKey()+ ", " + person.getValue()
+        for (Map.Entry<String, String> person : people.entrySet()) {
+            System.out.println(person.getKey() + ", " + person.getValue()
                     + ", " + addresses.getOrDefault(person.getKey(), "???"));
 
         }

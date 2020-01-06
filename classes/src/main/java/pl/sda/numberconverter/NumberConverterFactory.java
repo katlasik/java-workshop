@@ -3,9 +3,9 @@ package pl.sda.numberconverter;
 public class NumberConverterFactory {
 
     public static NumberConverter create(String type) {
-        if(type.equals("hex")) {
+        if (type.equals("hex")) {
             return new HexNumberConverter();
-        } else if(type.equals("morse")) {
+        } else if (type.equals("morse")) {
             return new MorseCodeNumberConverter();
         } else {
             return new NumberConverter() {
@@ -15,7 +15,7 @@ public class NumberConverterFactory {
                 }
             };
         }
-     }
+    }
 
     public static void main(String[] args) {
         NumberConverter hexConverter = NumberConverterFactory.create("hex");

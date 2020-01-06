@@ -23,7 +23,6 @@ class Streams {
 
     /**
      * Znajdź wszystkich użytkowników, których imię zaczyna się od prefiksu. Użyj funkcji `String.startsWith`.
-     *
      */
     List<User> findAllUsersWithFirstNameStartingWith(String prefix) {
         return repository.getUsers().filter(u -> u.getFirstName().startsWith(prefix)).collect(Collectors.toList());
@@ -111,18 +110,16 @@ class Streams {
      * Zróć listę łańcuchów znaków zawierającą email oraz tytuł wiadomości, na przykład:
      * 'email@gmail.com - Promocja!' ale tylko jeżeli domena emaila zgadza się z podaną w parametrze.
      * Dla domen różych od parametru, zwróć pojedyńczą wartość: 'email@wp.pl - Brak wiadomości'.
-     *
-     * */
+     */
     Stream<String> getAllMessageTitlesOfDomain(String domain) {
         return repository.getUsers().flatMap(u -> {
-            if(u.getEmail().split("@")[1].equals(domain)) {
+            if (u.getEmail().split("@")[1].equals(domain)) {
                 return repository.getMessageTitles(u.getEmail()).map(t -> u.getEmail() + " - " + t);
             } else {
                 return Stream.of(u.getEmail() + " - " + "Brak wiadomości");
             }
         });
     }
-
 
 
 }

@@ -12,7 +12,7 @@ public class NextBirthDay {
         LocalDate now = LocalDate.now();
         LocalDate nextAnniversary = LocalDate.of(now.getYear(), birthday.getMonth(), birthday.getDayOfMonth());
 
-        if(nextAnniversary.isBefore(now)) { //jeżeli  urodziny już minęły w tym roku, musimy dodać 1 rok
+        if (nextAnniversary.isBefore(now)) { //jeżeli  urodziny już minęły w tym roku, musimy dodać 1 rok
             nextAnniversary = nextAnniversary.plusYears(1);
         }
 

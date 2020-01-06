@@ -8,8 +8,8 @@ import java.util.function.Predicate;
 public class AllAndAny {
 
     static <T> boolean all(Collection<T> collection, Predicate<T> predicate) {
-        for(T element: collection) {
-            if(!predicate.test(element)) {
+        for (T element : collection) {
+            if (!predicate.test(element)) {
                 return false;
             }
         }
@@ -17,8 +17,8 @@ public class AllAndAny {
     }
 
     static <T> boolean any(Collection<T> collection, Predicate<T> predicate) {
-        for(T element: collection) {
-            if(predicate.test(element)) {
+        for (T element : collection) {
+            if (predicate.test(element)) {
                 return true;
             }
         }

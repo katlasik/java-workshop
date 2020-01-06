@@ -13,7 +13,7 @@ public class ShowTimeExercise {
 
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm:ss");
 
-        while(true) {
+        while (true) {
             System.out.println(dtf.format(LocalTime.now()));
             Thread.sleep(10_000);
         }

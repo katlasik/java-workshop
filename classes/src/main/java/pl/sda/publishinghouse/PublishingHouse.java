@@ -50,7 +50,7 @@ public class PublishingHouse {
         return publicationList;
     }
 
-  public String getName() {
-    return name;
-  }
+    public String getName() {
+        return name;
+    }
 }

@@ -4,24 +4,24 @@ import java.util.ArrayList;
 
 public class UniqueExercise {
 
-  /**
-   Stwórz metodę unique przyjmującą jako argument string. Metoda ta powinna zwrócić również string ale powinna pomijać wszystkie wystepujące już znaki. Na przykład:
+    /**
+     * Stwórz metodę unique przyjmującą jako argument string. Metoda ta powinna zwrócić również string ale powinna pomijać wszystkie wystepujące już znaki. Na przykład:
+     * <p>
+     * abcabcd -> abcd
+     * <p>
+     * aaaaaax -> ax
+     */
 
-   abcabcd -> abcd
+    public static String unique(String input) {
 
-   aaaaaax -> ax
-   */
+        ArrayList<String> result = new ArrayList<>();
 
-  public static String unique(String input) {
-
-    ArrayList<String> result = new ArrayList<>();
-
-    for(String c: input.split("")) {
-      if(!result.contains(c)){
-        result.add(c);
-      }
+        for (String c : input.split("")) {
+            if (!result.contains(c)) {
+                result.add(c);
+            }
+        }
+        return String.join("", result);
     }
-    return String.join("", result);
-  }
 
 }

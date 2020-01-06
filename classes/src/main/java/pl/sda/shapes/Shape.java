@@ -20,6 +20,7 @@ public abstract class Shape {
     }
 
     abstract double area();
+
     abstract double circuit();
 
     void display() {

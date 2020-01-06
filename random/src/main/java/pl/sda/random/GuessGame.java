@@ -19,8 +19,8 @@ public class GuessGame {
 
         System.out.println("Zgadnij liczbę od 1 do 100.");
         int pick = scanner.nextInt();
-        while(target != pick) {
-            if(target < pick) {
+        while (target != pick) {
+            if (target < pick) {
                 System.out.println("Za wysoko!");
             } else {
                 System.out.println("Za nisko!");

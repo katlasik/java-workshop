@@ -1,11 +1,11 @@
 package pl.sda.shapes;
 
-public class Square extends Shape implements HasColor{
+public class Square extends Shape implements HasColor {
 
     private double a;
     private String color;
 
-    public  Square(double a) {
+    public Square(double a) {
         super("Kwadrat");
         this.a = a;
     }

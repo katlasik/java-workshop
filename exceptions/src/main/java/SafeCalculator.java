@@ -22,7 +22,7 @@ public class SafeCalculator {
             String line = scanner.next();
 
             if (line.equals("=")) {
-                System.out.println("Suma liczb "+ gather(numbers) + " to: " + sum(numbers));
+                System.out.println("Suma liczb " + gather(numbers) + " to: " + sum(numbers));
                 break;
             } else {
                 try {
@@ -41,7 +41,7 @@ public class SafeCalculator {
         String result = "";
         for (int i = 0; i < numbers.size(); i++) {
             result += numbers.get(i);
-            if(i < numbers.size() - 1) {//dodaj przecinek zawsze, oprócz ostatniego razu
+            if (i < numbers.size() - 1) {//dodaj przecinek zawsze, oprócz ostatniego razu
                 result += ",";
             }
         }

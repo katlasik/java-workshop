@@ -7,7 +7,7 @@ public class TryParseExercise {
     static Integer tryParse(String input) {
         try {
             return Integer.parseInt(input);
-        } catch(NumberFormatException e) {
+        } catch (NumberFormatException e) {
             throw new IllegalArgumentException("Nieprawidłowa liczba", e);
         }
     }

@@ -5,7 +5,7 @@ public class SumExercise {
      */
     static int sumAll(int... ints) {
         int sum = 0;
-        for(int i: ints) {
+        for (int i : ints) {
             sum += i;
         }
         return sum;

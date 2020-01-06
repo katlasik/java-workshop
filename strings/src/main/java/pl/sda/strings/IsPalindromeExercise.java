@@ -2,36 +2,35 @@ package pl.sda.strings;
 
 public class IsPalindromeExercise {
 
-  /**
-   Stwórz metodę `isPalindrome` zwracającą true, jeżeli przekazany string jest palidromem.
+    /**
+     * Stwórz metodę `isPalindrome` zwracającą true, jeżeli przekazany string jest palidromem.
+     * <p>
+     * `kajak` -> true
+     * `kaja` -> false
+     */
 
-   `kajak` -> true
-   `kaja` -> false
+    public static boolean isPalindrome(String input) {
 
-   */
+        char[] chars = input.toCharArray();
 
-  public static boolean isPalindrome(String input) {
+        int indexStart = 0, indexEnd = chars.length - 1;
 
-    char[] chars = input.toCharArray();
+        while (indexStart <= indexEnd) {
+            if (chars[indexStart] != chars[indexEnd]) {
+                return false;
+            }
+            indexEnd--;
+            indexStart++;
+        }
 
-    int indexStart = 0, indexEnd = chars.length - 1;
-
-    while(indexStart <= indexEnd) {
-      if(chars[indexStart] != chars[indexEnd]) {
-        return false;
-      }
-      indexEnd--;
-      indexStart++;
+        return true;
     }
 
-    return true;
-  }
-
-  /**
-   * Stwórz drugą wersję metody, która ignoruje spacje oraz wielkość liter podczas sprawdzania tekstu.
-   */
-  public static boolean isPalindromeIngoringSpaceAndCase(String input) {
-    return isPalindrome(input.toLowerCase().replace(" ", ""));
-  }
+    /**
+     * Stwórz drugą wersję metody, która ignoruje spacje oraz wielkość liter podczas sprawdzania tekstu.
+     */
+    public static boolean isPalindromeIngoringSpaceAndCase(String input) {
+        return isPalindrome(input.toLowerCase().replace(" ", ""));
+    }
 
 }

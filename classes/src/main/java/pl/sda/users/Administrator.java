@@ -19,7 +19,7 @@ public class Administrator extends User {
     @Override
     public boolean authenticate(String username, String password) {
         boolean authenticated = super.authenticate(username, password);
-        if(authenticated) {
+        if (authenticated) {
             confirmWithMFA();
         }
         return authenticated;
@@ -28,13 +28,11 @@ public class Administrator extends User {
     @Override
     public boolean authenticate(String secret) {
         boolean authenticated = super.authenticate(secret);
-        if(authenticated) {
+        if (authenticated) {
             confirmWithMFA();
         }
         return authenticated;
     }
-
-
 
 
 }

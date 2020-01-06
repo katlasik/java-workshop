@@ -20,7 +20,7 @@ public class ModifyExercise {
             if (i == index) {
                 result.add(strings.get(i).toUpperCase());
             } else {
-               result.add(strings.get(i));
+                result.add(strings.get(i));
             }
         }
 
@@ -28,17 +28,15 @@ public class ModifyExercise {
     }
 
     /**
-     *
      * Stwórz analogiczną metody modifyRepeat, która powiela string dwukrotnie.
      * ["aaa", "bbb", "ccc", "ddd"] oraz 2 -> ["aaa", "bbb", "cccccc", "ddd"]
-     *
      */
     public static List<String> modifyRepeat(List<String> strings, int index) {
         ArrayList<String> result = new ArrayList<>();
 
         for (int i = 0; i < strings.size(); i++) {
             if (i == index) {
-                result.add(strings.get(i)+strings.get(i));
+                result.add(strings.get(i) + strings.get(i));
             } else {
                 result.add(strings.get(i));
             }

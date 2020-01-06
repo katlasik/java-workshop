@@ -1,5 +1,5 @@
 package pl.sda.enums;
 
-enum WeekendType{
+enum WeekendType {
     REGULAR, ISLAMIC
 }

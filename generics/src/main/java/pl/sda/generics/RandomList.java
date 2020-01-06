@@ -21,7 +21,7 @@ public class RandomList<X> {
 
     X getRandom(boolean returning) {
 
-        if(list.size() == 0) {
+        if (list.size() == 0) {
             throw new IllegalStateException("Nie można wylosować elementu z pustej listy.");
         }
 
@@ -29,7 +29,7 @@ public class RandomList<X> {
 
         X element = list.get(idx);
 
-        if(!returning) {
+        if (!returning) {
             list.remove(idx);
         }
 

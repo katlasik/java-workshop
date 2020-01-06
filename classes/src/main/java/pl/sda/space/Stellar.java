@@ -12,7 +12,7 @@ package pl.sda.space;
  * metody `Collections.sort`.
  */
 
-public abstract class Stellar implements Comparable<Stellar>{
+public abstract class Stellar implements Comparable<Stellar> {
 
     private String name;
     private int radius;

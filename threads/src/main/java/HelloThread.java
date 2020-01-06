@@ -16,7 +16,7 @@ public class HelloThread {
     public static void main(String[] args) {
 
         new Thread(() -> {
-            while(true) {
+            while (true) {
                 System.out.println("Witaj z innego wątku.");
                 sleep(10_000);
             }

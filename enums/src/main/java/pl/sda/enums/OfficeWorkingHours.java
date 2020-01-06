@@ -12,9 +12,9 @@ public class OfficeWorkingHours {
 
     String getOfficeWorkingHours(DayOfWeek day) {
 
-        if(daysWithExtendedWorkingHours.contains(day)) {
+        if (daysWithExtendedWorkingHours.contains(day)) {
             return "8-17";
-        } else if(day.isWeekend()) {
+        } else if (day.isWeekend()) {
             return "closed";
         } else {
             return "8-15";

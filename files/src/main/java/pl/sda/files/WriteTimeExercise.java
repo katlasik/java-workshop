@@ -18,7 +18,7 @@ public class WriteTimeExercise {
 
         Path path = Paths.get("files/src/main/resources/time");
 
-        if(!Files.exists(path)) {
+        if (!Files.exists(path)) {
             Files.createFile(path);
         }
 

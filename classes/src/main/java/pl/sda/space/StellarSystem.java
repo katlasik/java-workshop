@@ -8,7 +8,7 @@ public class StellarSystem {
     private List<Planet> planets = new ArrayList<>();
 
     void addPlanets(Planet... planets) {
-        for(Planet planet: planets) {
+        for (Planet planet : planets) {
             this.planets.add(planet);
         }
     }
@@ -20,7 +20,7 @@ public class StellarSystem {
     List<Moon> moons() {
         ArrayList<Moon> result = new ArrayList<>();
 
-        for(Planet p: planets) {
+        for (Planet p : planets) {
             result.addAll(p.getMoons());
         }
 

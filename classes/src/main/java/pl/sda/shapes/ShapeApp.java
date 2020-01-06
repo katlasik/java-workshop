@@ -13,7 +13,7 @@ public class ShapeApp {
 
         Shape shape = null;
 
-        while(shape == null) {
+        while (shape == null) {
             switch (choice) {
                 case "P":
                     System.out.println("Wpisz długość boków:");
