@@ -6,7 +6,7 @@ class SumExerciseTest {
 
     @Test
     void test() {
-        assertThat(SumExercise.sumAll(1,2,3)).isEqualTo(6);
+        assertThat(SumExercise.sumAll(1, 2, 3)).isEqualTo(6);
     }
 
 }

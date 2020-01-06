@@ -8,11 +8,11 @@ import java.util.List;
  */
 public class SwapExercise {
 
-    static int[] swap (int[] ints, int from, int to) {
+    static int[] swap(int[] ints, int from, int to) {
         return null;
     }
 
-    static List<Integer> swapList (List<Integer> ints, int from, int to) {
+    static List<Integer> swapList(List<Integer> ints, int from, int to) {
         return null;
     }
 

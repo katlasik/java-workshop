@@ -5,12 +5,12 @@ import java.util.Map;
 
 public class HistogramExercise {
 
-  /**
-   * Stwórz metodę `showHistogram(String input)`, która będzie otrzymywać łańcuch tekstowy i będzie wyświetlać
-   * wszystkie znaki oraz ile razy występuję. Na przykład `showHistogram("aaabbbc")` powienien zwrócić:
-   */
-  public static String showHistogram(String data) {
-    return null;
-  }
+    /**
+     * Stwórz metodę `showHistogram(String input)`, która będzie otrzymywać łańcuch tekstowy i będzie wyświetlać
+     * wszystkie znaki oraz ile razy występuję. Na przykład `showHistogram("aaabbbc")` powienien zwrócić:
+     */
+    public static String showHistogram(String data) {
+        return null;
+    }
 
 }

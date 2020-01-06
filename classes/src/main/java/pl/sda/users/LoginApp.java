@@ -13,7 +13,7 @@ import java.util.Scanner;
  * która wyświetla na konsolę tekst *"Wysyłam SMS z kodem dostępu..."*. Przesłoń obydwie metody `authenticate` dla klasy `Administrator`, tak by zawsze wywoływały metodę `confirmWithMFA`. Dodaj obiekt klasy `Administrator` do tablicy użytkowników oraz spróuje się na niego zalogować.
  */
 
- public class LoginApp {
+public class LoginApp {
 
 
     public static void main(String[] args) {

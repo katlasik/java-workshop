@@ -7,7 +7,7 @@ import java.util.Scanner;
  * do listy aż do wpisania słowa *"koniec"*.
  * Następnie program powinien wyświetlić je podzielone przecinkami pomijajac `koniec`.
  * Na przykład: `Wczytano 3 słowa: Jaś, piłka, słowo.`.
- *
+ * <p>
  * Rozważ użycie metod `String.join` i `String.format`.
  */
 public class ReadWords {

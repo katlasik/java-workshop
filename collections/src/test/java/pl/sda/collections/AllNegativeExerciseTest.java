@@ -10,9 +10,9 @@ class AllNegativeExerciseTest {
 
     @Test
     void test() {
-        assertThat(AllNegativeExercise.allNegative(List.of(1,2,3))).isFalse();
-        assertThat(AllNegativeExercise.allNegative(List.of(1,-2,3))).isFalse();
-        assertThat(AllNegativeExercise.allNegative(List.of(-1,-2,-3))).isTrue();
+        assertThat(AllNegativeExercise.allNegative(List.of(1, 2, 3))).isFalse();
+        assertThat(AllNegativeExercise.allNegative(List.of(1, -2, 3))).isFalse();
+        assertThat(AllNegativeExercise.allNegative(List.of(-1, -2, -3))).isTrue();
     }
 
 }

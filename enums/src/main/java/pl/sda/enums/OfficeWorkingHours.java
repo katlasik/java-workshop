@@ -10,7 +10,7 @@ public class OfficeWorkingHours {
     }
 
     String getOfficeWorkingHours(DayOfWeek day) {
-            return null;
+        return null;
 
     }
 

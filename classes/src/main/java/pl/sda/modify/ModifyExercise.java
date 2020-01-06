@@ -1,6 +1,7 @@
 package pl.sda.modify;
 
 import java.util.List;
+
 public class ModifyExercise {
 
     /**
@@ -15,10 +16,8 @@ public class ModifyExercise {
     }
 
     /**
-     *
      * Stwórz analogiczną metody modifyRepeat, która powiela string dwukrotnie.
      * ["aaa", "bbb", "ccc", "ddd"] oraz 2 -> ["aaa", "bbb", "cccccc", "ddd"]
-     *
      */
     public static List<String> modifyRepeat(List<String> strings, int index) {
         return null;

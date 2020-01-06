@@ -14,6 +14,7 @@ package pl.sda.shapes;
 public abstract class Shape {
 
     abstract double area();
+
     abstract double circuit();
 
 }

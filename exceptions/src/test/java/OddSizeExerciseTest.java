@@ -13,6 +13,6 @@ class OddSizeExerciseTest {
 
         assertThat(exception.getClass().toString().contains("OddSizeException")).isTrue();
 
-        OddSizeExercise.checkList(List.of(1,2));
+        OddSizeExercise.checkList(List.of(1, 2));
     }
 }
