@@ -1,13 +1,17 @@
 # Java workshop
 
-[![CircleCI](https://circleci.com/gh/katlasik/java-workshop.svg?style=svg)](https://circleci.com/gh/katlasik/java-workshop)
-
-## Instalacja
+## Instalacja z git
 
 1. Otwieramy `File` > `New` > `Project from Version Control` > `Git`.
 2. Wklejamy adres `https://github.com/katlasik/java-workshop.git`.
 3. Po otwarciu projektu klikamy `Add as Maven Project` w prawy dolnym rogu.
 4. Jeżeli pojawi się komunikat `Project's SDK is not defined` to wybieramy wersję Javy.
+
+## Instalacja z zip
+
+1. Odpakowujemy plik.
+2. W IntelliJ `File` > `New` > `Project from Existing Sources` i wybieramy katalog z projektem.
+3. Jeżeli pojawi się komunikat `Project's SDK is not defined` to wybieramy wersję Javy.
 
 ## Odpowiedzi
 
