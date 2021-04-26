@@ -1,7 +1,5 @@
 # Java workshop
 
-[![CircleCI](https://circleci.com/gh/katlasik/java-workshop.svg?style=svg)](https://circleci.com/gh/katlasik/java-workshop)
-
 ## Instalacja
 
 1. Otwieramy `File` > `New` > `Project from Version Control` > `Git`.
