@@ -363,6 +363,10 @@ w głównym wątku wyświetljącą `Witaj z głownego wątku!` co 20 sekund.
 klasy będzie wyświetlenie liczby razem z z nazwą watku, a następnie odczekanie 1 sekundy i zmniejszenie wartości
 licznika o `1`, a natępnie powtórzenie operacji aż do osiągnięcia `0`. Innymi słowy należe odliczyć od `n` do `0`.
 
+3. Napraw aplikację banks, tak by suma stanów kont była zawsze równa 2000.
+
+4. Napraw klasę Counter tak by wynik zawsze był poprawny. Zastosuj synchronizację.
+
 ### Wyrażenia regularne
 
 Zaimplementuj wszystkie metody w klasach `Matches`, `Find`, `Replace`, `Split` oraz `FindGroups`, tak by testy kończyły się powodzeniem.
@@ -377,11 +381,13 @@ jako drugi argument i wyświetl.
 ### Strumienie
 
 * Zwróć set zawierający wszystkich użytkowników korzystając z metody **repository.getUsers**.
+* Zwróć listę imion użytkowników.
+* Zwróć listę emaili użytkowników.
+* Zwróć pierwszych liter imion użytkowników.
 * Znajdź wszystkich użytkowników, których imię zaczyna się od prefiksu. Użyj funkcji `String.startsWith`.
 * Znajdź największy wiek użytkownika.
 * Zwróć listę unikalnych wartości wieku użytkowników.
 * Wyszukaj pierwszego użytkownika po podanym adresie email.
-* Zwróć listę imion użytkowników.
 * Zwróć listę imion i nazwisk (połączonych jako jeden łańcuch) użytkowników z literami zamienionymi na duże.
 * Zwróc wszystkich użytkowników starszych niż wiek podany jako parametr.
 * Zwróć imiona wszystkich użytkowników podzielone przecinkami ako jeden łańcuch znaków.

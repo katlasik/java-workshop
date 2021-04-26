@@ -26,6 +26,21 @@ class StreamsTest {
     }
 
     @Test
+    void allFirstNames() {
+        assertThat(streams.allFirstNames()).containsExactly("Roman", "Darek", "Bartek", "Sławomir", "Agnieszka", "Wojciech");
+    }
+
+    @Test
+    void allEmails() {
+        assertThat(streams.allEmails()).containsExactly("rkoz@adres.pl", "dg@wb.pl", "bartek@kozlarz.pl", "nit@wb.pl", "aw@gmail.com", "ww@gmail.com");
+    }
+
+    @Test
+    void allInitialLettersOfNames() {
+        assertThat(streams.allInitialLettersOfNames()).containsExactly("R", "D", "B", "S", "A", "W");
+    }
+
+    @Test
     void findAllUsersWithFirstNameStartingWith() {
         assertThat(streams.findAllUsersWithFirstNameStartingWith("Rom")).containsExactly(
                 new User("Roman", "Kozielski", 20, "rkoz@adres.pl")
@@ -46,11 +61,6 @@ class StreamsTest {
     @Test
     void findAges() {
         assertThat(streams.findAges()).containsExactly(20, 34, 36, 44, 54);
-    }
-
-    @Test
-    void allFirstNames() {
-        assertThat(streams.allFirstNames()).containsExactly("Roman", "Darek", "Bartek", "Sławomir", "Agnieszka", "Wojciech");
     }
 
     @Test

@@ -22,6 +22,27 @@ class Streams {
     }
 
     /**
+     * Zwróć listę imion użytkowników.
+     */
+    List<String> allFirstNames() {
+        return null;
+    }
+
+    /**
+     * Zwróć listę emaili użytkowników.
+     */
+    List<String> allEmails() {
+        return null;
+    }
+
+    /**
+     * Zwróć listę wszystkich pierwszych imion użytkowników.
+     */
+    List<String> allInitialLettersOfNames() {
+        return null;
+    }
+
+    /**
      * Znajdź wszystkich użytkowników, których imię zaczyna się od prefiksu. Użyj funkcji `String.startsWith`.
      */
     List<User> findAllUsersWithFirstNameStartingWith(String prefix) {
@@ -39,13 +60,6 @@ class Streams {
      * Zwróć posortowaną listę unikalnych wartości wieku użytkowników.
      */
     List<Integer> findAges() {
-        return null;
-    }
-
-    /**
-     * Zwróć listę imion użytkowników.
-     */
-    List<String> allFirstNames() {
         return null;
     }
 
