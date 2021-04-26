@@ -145,6 +145,9 @@ Aby znaleźć odpowiedź na zadanie należy wejść na odpowiadającą mu scię�
 
    * Zastanów się, czy nie można zmienić metody `modify`, tak by można było wyszukiwać element po dowolnej właściwości nie tylko po indeksie.
 
+9. Stwórz klasę `Event` posiadającą pola `name` i `duration`. Stwórz listę obiektów klasy `Event`.
+   Posortuj je najpiej po polu `name`, następnie po `duration`, używajc interfejsu `Comparator` i  `Collections.sort`.
+
 ### Kolekcje
 
 1. Stwórz metodę `boolean isSorted(List <String> ints)` przyjmującą listę i zwracającą `true`, gdy jej elementy zachowują rosnącą kolejność.
