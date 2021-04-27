@@ -36,7 +36,7 @@ Aby znaleźć odpowiedź na zadanie należy wejść na odpowiadającą mu scię�
      
      | Figura              | Pole      | Obwód     |
      |---------------------|-----------|-----------|
-     | Kwadrat             | 4*a       | a*a       |
+     | Kwadrat             | a*a       | 4*a       |
      | Prostokąt           | a*b       | 2*a + 2*b |
      | Trójkąt równoboczny | 0.433*a*a | 3*a       |
      | Romb                | a*h       | 4*a       |
