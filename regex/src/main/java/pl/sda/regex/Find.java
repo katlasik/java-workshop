@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 public class Find {
 
     /**
-     * Uzupełnij fukcję, tak by znalazła tekst umieszczony pomiędzy pojedyńczymi cudzysłowami.
+     * Uzupełnij funkcję, tak by znalazła tekst umieszczony pomiędzy pojedyńczymi cudzysłowami.
      * <p>
      * Nazwa to 'test1' -> 'test1'
      * Tekst to ''      -> ''

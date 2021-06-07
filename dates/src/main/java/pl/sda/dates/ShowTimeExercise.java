@@ -2,7 +2,7 @@ package pl.sda.dates;
 
 
 /**
- * Napisz fukcję wyświetlającą godzinię na przykład `10:10:15` co 10 sekund.
+ * Napisz fukcję wyświetlającą godzinę na przykład `10:10:15` co 10 sekund.
  */
 public class ShowTimeExercise {
 

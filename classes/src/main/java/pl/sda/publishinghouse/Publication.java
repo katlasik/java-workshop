@@ -1,11 +1,11 @@
 package pl.sda.publishinghouse;
 
 /**
- * Stwórz klasę abstakcyjną `Publication`, zawierająca pola `author`, `year` oraz `price` i metody dostępowe do niej.
+ * Stwórz klasę abstrakcyjną `Publication`, zawierająca pola `author`, `year` oraz `price` i metody dostępowe do niej.
  * Stwórz konstruktor ustawiający te pola. Stwórz konstruktor, który ustawia tylko rok, a nazwę autora ustawia na *"nieznany"*.
  * Stwórz klasy dziedziczące po `Publication`: `BlogEnty`, `Book`, `Ebook`, `Magazine`.
  * Zapewnij dla każdej z klas metody `equals`, `toString` oraz `hashCode`.
- * Dodaj pole `isHardcover`, ale tylko dla `Book`. Jeżeli pole to **true** to przeciąż metodę `getPrice()`, tak by zwracałą cenę pomnożoną razy *2*.
+ * Dodaj pole `isHardcover`, ale tylko dla `Book`. Jeżeli pole to **true** to przeciąż metodę `getPrice()`, tak by zwracała cenę pomnożoną razy *2*.
  * Dodaj statyczne finalne pole `DEFAULT_AUTHOR` w `Magazine` przechowujące stałą wartość *"Redaktor Naczelny"*.
  * Jeżeli wartość zwrócona przez `getAuthor` klasy nadrzędnej to *"nieznany"* to zamiast niej zwróć wartość `DEFAULT_AUTHOR`.
  * Stwórz niezależną, niedziedziczącą po `Publication` klasę `PublishingHouse`, która będzie miała pole `name`.
@@ -21,9 +21,9 @@ package pl.sda.publishinghouse;
  * Stwórz interfejs `Downloadable`, który będzie zawierał metodę `String downloadUrl`. Zmodyfikuj
  * `BlogEntry` oraz `Ebook`, tak by go implementowały. Czy `Magazine` i `Book` powinny implementować `Downloadable`?
  * Stwórz interfejs `Printable`, który będzie zawierał metodę `int pageNumber`. Zmodyfikuj `Book` i `Magazine`, tak by go implementowały.
- * Czy pozostałe klasy powinny go impementować?
+ * Czy pozostałe klasy powinny go implementować?
  * Dodaj do `PublishingHouse` metodę `downloadUrls`, która zwróci wszyskie linki do publikacji online.
- * Zmodyfikuj `getPublications`, tak by zwracałą posortowaną listę publikacji od najstarszej.
+ * Zmodyfikuj `getPublications`, tak by zwracała posortowaną listę publikacji od najstarszej.
  */
 public abstract class Publication {
 

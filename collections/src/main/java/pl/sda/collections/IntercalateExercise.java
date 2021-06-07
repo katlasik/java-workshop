@@ -6,7 +6,7 @@ import java.util.List;
 public class IntercalateExercise {
 
     /**
-     * Stwórz metodę intercalate, która będzie otrzymywać listę elemntów `int`
+     * Stwórz metodę intercalate, która będzie otrzymywać listę elementów `int`
      * oraz dodatkowy element typu `int`.
      * Metoda ta ma zwrócić listę elementów listy przeplataną dodatkowym elementem:
      * <p>

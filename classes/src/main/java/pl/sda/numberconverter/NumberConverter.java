@@ -16,7 +16,7 @@ package pl.sda.numberconverter;
  * * 0:  — — — — —
  * <p>
  * Stwórz klasę `HexNumberConverter`, która zmienia arabską liczbę na heksadecymalną. Skorzystaj z metody `Integer.toHexString`.
- * Stwórz klase `NumberConverterFactory`, która posiada statyczną metodę `createConverter`, która jako parametr przyjmuje łańcuch znaków.
+ * Stwórz klasę `NumberConverterFactory`, która posiada statyczną metodę `createConverter`, która jako parametr przyjmuje łańcuch znaków.
  * Jeżeli zostanie podany do niej łańcuch *"hex"* powinna wrócić implementację `HexNumberConverter`,
  * a jeżeli *"morse"*, to `MorseNumberConverter`. Jeżeli zostanie podany inny łańcuch, to
  * powinna zostać zwrócona implementacja `NumberConverter`, która zwraca ten sam łańcuch `("test" -> "test")`.

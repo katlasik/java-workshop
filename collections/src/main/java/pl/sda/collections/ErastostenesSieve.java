@@ -4,7 +4,7 @@ import java.util.List;
 
 /**
  * Zaimplementuj sito Erastotenesa. Funkcja obliczająca sito powinna
- * otrzymać jako parametr liczbę `limit` i powinna znaleźc wszystkie liczby pierwsze mniejsze od `limit`.
+ * otrzymać jako parametr liczbę `limit` i powinna znaleźć wszystkie liczby pierwsze mniejsze od `limit`.
  */
 public class ErastostenesSieve {
 

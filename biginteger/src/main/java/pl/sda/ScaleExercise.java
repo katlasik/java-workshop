@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class ScaleExercise {
 
     /**
-     * Stwórz aplikację wczytującą dowolną liczbę ułamkową oraz liczbę całkowitą, następnie zaookrągl liczbę ułamkową do precyzji przekazanej
+     * Stwórz aplikację wczytującą dowolną liczbę ułamkową oraz liczbę całkowitą, następnie zaokrąglij liczbę ułamkową do precyzji przekazanej
      * jako drugi argument i wyświetl.
      */
     public static void main(String[] args) {

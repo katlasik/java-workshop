@@ -4,7 +4,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Zaimplementuj algorytm sortowania bąbęlkowego.
+ * Zaimplementuj algorytm sortowania bąbelkowego.
  */
 public class BubbleSort {
 

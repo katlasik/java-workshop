@@ -16,20 +16,20 @@
 ## Odpowiedzi
 
 Odpowiedzi do zadań znajdują się pod poniższym [linkiem](https://github.com/katlasik/java-workshop/tree/solutions). 
-Aby znaleźć odpowiedź na zadanie należy wejść na odpowiadającą mu sciężkę.
+Aby znaleźć odpowiedź na zadanie, należy wejść na odpowiadającą mu ścieżkę.
 
 ## Zadania
 
 ### Programowanie obiektowe
 
 1. * Stwórz klasę `User`, zawierającą pola typu `String` `password`, `username` oraz `secret`. Stwórz dla niej metody dostępowe. Stwórz konstruktor, który ustawia tylko `username` i `password`, a dla `secret` ustawia *"---"* oraz drugi, który ustawia wszystkie pola.
-   * Do klasy `User` dodaj metodę `boolean authenticate(String username, String password)`. Metoda powinna zwrócić `true` w przypadku, gdy zostanie wywołana z hasłem i nazwą użytkownika zgadzającą się z tymi przechowywanumi w obiekcie.  Dodaj także drugą metodę `boolean authenticate(String secret)`, która zwróci `true`, gdy podany parametr jest taki sam jak w polu `secret`, ale nigdy gdy pole `secret` zawiera *"---"*.
+   * Do klasy `User` dodaj metodę `boolean authenticate(String username, String password)`. Metoda powinna zwrócić `true` w przypadku, gdy zostanie wywołana z hasłem i nazwą użytkownika zgadzającą się z tymi przechowywanymi w obiekcie.  Dodaj także drugą metodę `boolean authenticate(String secret)`, która zwróci `true`, gdy podany parametr jest taki sam jak w polu `secret`, ale nigdy gdy pole `secret` zawiera *"---"*.
    * Stwórz klasę `LoginApp`. Dodaj do niej statyczne pole-tablicę zawierającą 5 obiektów `user`.
-   * Dodaj metodę `main`, która wyświetli komunikat dla użytkownika by wpisał login i hasło oraz wczyta te dane. Następnie przeszukaj tablicę obiektów szukając użytkownika, którego metoda `authenticate` zwróci `true` dla pary nazwa użytkownika-hasło.
+   * Dodaj metodę `main`, która wyświetli komunikat dla użytkownika, by wpisał login i hasło oraz wczyta te dane. Następnie przeszukaj tablicę obiektów szukając użytkownika, którego metoda `authenticate` zwróci `true` dla pary nazwa użytkownika-hasło.
    * Jeżeli znajdziesz pasujący obiekt, to wyświetl komunikat *"Witaj <nazwa użytkownika>!"*, wyświetl listę wszystkich użytkowników i zakończ program. Jeżeli nie uda się znaleźć pasującego obiektu, to poinformuj użytkownika i ponownie wyświetl komunikat z prośbą o wpisanie hasła.
    * *(Opcjonalnie)* Dodaj możliwość wyboru zalogowania się poprzez tajny token.
    * Stwórz klasę `Administrator`, która dziedziczy po po klasie `User`. Dodaj metodę `void confirmWithMFA()` dla klasy `Administrator`,
-     która wyświetla na konsolę tekst *"Wysyłam SMS z kodem dostępu..."*. Przesłoń obydwie metody `authenticate` dla klasy `Administrator`, tak by zawsze wywoływały metodę `confirmWithMFA`. Dodaj obiekt klasy `Administrator` do tablicy użytkowników oraz spróuje się na niego zalogować.
+     która wyświetla na konsolę tekst *"Wysyłam SMS z kodem dostępu..."*. Przesłoń obydwie metody `authenticate` dla klasy `Administrator`, tak by zawsze wywoływały metodę `confirmWithMFA`. Dodaj obiekt klasy `Administrator` do tablicy użytkowników oraz spróbuje się na niego zalogować.
 
 2. * Stwórz 4 klasy `Square`, `Rectangle`, `EquilateralTriangle` i `Rhombus`. Każda z tych klas ma przechowywać w sobie informację potrzebne do obliczenia jej pola oraz obwodu. Oznacza to też, że każda z tych klas powinna mieć w sobie metody
      `area` oraz `circuit` obliczające pole i obwód.
@@ -41,14 +41,14 @@ Aby znaleźć odpowiedź na zadanie należy wejść na odpowiadającą mu scię�
      | Trójkąt równoboczny | 0.433*a*a | 3*a       |
      | Romb                | a*h       | 4*a       |
      
-   * Stwórz klasę abstraktycjną `Shape` po której będzie dziedziczyć, każda z tych klas. Klasa abstrakcyjna powinna zawierać abstrakcyjne metody `area` oraz `circuit`. Powinna zawierać też pole `name`, zawierające nazwę figury. Każda z dziedziczących figur powinna ustawiać to pole w konstruktorze.
+   * Stwórz klasę abstrakcyjną `Shape` po której będzie dziedziczyć, każda z tych klas. Klasa abstrakcyjna powinna zawierać abstrakcyjne metody `area` oraz `circuit`. Powinna zawierać też pole `name`, zawierające nazwę figury. Każda z dziedziczących figur powinna ustawiać to pole w konstruktorze.
    * Stwórz metodę `display` w klasie `Shape`, tak by wyświetlała łańcuch zawierający nazwę figury, jej obwód oraz pole. Na przykład: *"Kwadrat, pole = 4, obwód = 8"*.
-   * Dodaj klasę `ShapeApp` oraz metodę `main`, w której będzie można zapytać użytkownika jaką figurę chce wpisać, 
+   * Dodaj klasę `ShapeApp` oraz metodę `main`, w której będzie można zapytać użytkownika, jaką figurę chce wpisać, 
      a następnie wczytać potrzebne dane i wywołać `display`.
-   * Stwórz interfejs `HasColor`, posiadający pojedyńczą metodę `String color()` i zaimplementuj go w klasie `Square`. Stwórz też klasę
-     `Cat`, która rówież implementuje ten interfejs.  Następnie dodaj dodatkową klasę `ColorApp`, która będzie zawierać statyczne pole z tablicą o typie `HasColor[]`, które zawierają instancje klas `Cat` i `Square`. Następnie dodaj metodę `main`, która iteruje po tej tablicy oraz wyświetla kolory obiektów.
+   * Stwórz interfejs `HasColor`, posiadający pojedynczą metodę `String color()` i zaimplementuj go w klasie `Square`. Stwórz też klasę
+     `Cat`, która również implementuje ten interfejs.  Następnie dodaj dodatkową klasę `ColorApp`, która będzie zawierać statyczne pole z tablicą o typie `HasColor[]`, które zawierają instancje klas `Cat` i `Square`. Następnie dodaj metodę `main`, która iteruje po tej tablicy oraz wyświetla kolory obiektów.
      
-3. * Stwórz klasę abstakcyjną `Publication`, zawierająca pola `author`, `year` oraz `price` i metody dostępowe do niej.
+3. * Stwórz klasę abstrakcyjną `Publication`, zawierająca pola `author`, `year` oraz `price` i metody dostępowe do niej.
      Stwórz konstruktor ustawiający te pola. Stwórz konstruktor, który ustawia tylko rok, a nazwę autora ustawia na *"nieznany"*.
    * Stwórz klasy dziedziczące po `Publication`: `BlogEnty`, `Book`, `Ebook`, `Magazine`.
    * Zapewnij dla każdej z klas metody `equals`, `toString` oraz `hashCode`.
@@ -68,9 +68,9 @@ Aby znaleźć odpowiedź na zadanie należy wejść na odpowiadającą mu scię�
    * Stwórz interfejs `Downloadable`, który będzie zawierał metodę `String downloadUrl`. Zmodyfikuj 
      `BlogEntry` oraz `Ebook`, tak by go implementowały. Czy `Magazine` i `Book` powinny implementować `Downloadable`?
    * Stwórz interfejs `Printable`, który będzie zawierał metodę `int pageNumber`. Zmodyfikuj `Book` i `Magazine`, tak by go implementowały.
-     Czy pozostałe klasy powinny go impementować?
-   * Dodaj do `PublishingHouse` metodę `downloadUrls`, która zwróci wszyskie linki do publikacji online.
-   * Zmodyfikuj `getPublications`, tak by zwracałą posortowaną listę publikacji od najstarszej.
+     Czy pozostałe klasy powinny go implementować?
+   * Dodaj do `PublishingHouse` metodę `downloadUrls`, która zwróci wszystkie linki do publikacji online.
+   * Zmodyfikuj `getPublications`, tak by zwracała posortowaną listę publikacji od najstarszej.
 
 4. * Stwórz klasę `Filter`, która w konstruktorze przyjmuje dwie liczby i posiada metodę `filter`,
      która przyjmuje kolekcje liczb. Metoda ta powinna zwrócić nową kolekcję, ale tylko
@@ -90,9 +90,9 @@ Aby znaleźć odpowiedź na zadanie należy wejść na odpowiadającą mu scię�
 
 5. Utwórz klasę o nazwie `MyNumber`, której jedyny konstruktor przyjmuje liczbę. Klasa powinna mieć następujące metody:
    
-   * `boolean isOdd()` – `true` jeśli paramentr jest nieparzysty
-   * `boolean isEven()` – `true` jeśli paramentr jest parzysty
-   * `MyNumber sqrt()` – pierwiastek z paramentru,
+   * `boolean isOdd()` – `true` jeśli parametr jest nieparzysty
+   * `boolean isEven()` – `true` jeśli parametr jest parzysty
+   * `MyNumber sqrt()` – pierwiastek z parametr,
    * `MyNumber pow(MyNumber x)` – parametr podniesiony do potęgi `x` (potrzebnej metody poszukaj w javadoc w klasie Math) opakowany `MyNumber`,
    * `MyNumber add(MyNumber x)` – zwraca sumę atrybutu i `x` opakowaną w klasę `MyNumber`,
    * `MyNumber subtract(MyNumber x)` – zwraca różnicę atrybutu i `x` opakowaną w klasę `MyNumber`.
@@ -103,7 +103,7 @@ Aby znaleźć odpowiedź na zadanie należy wejść na odpowiadającą mu scię�
 
    * Stwórz abstrakcyjną klasę `Stellar`.
    * Stwórz klasy dziedziczące: `Planet`, czy `Moon`.
-   * Zdefiniuj pola jak masa i rozmiar. Zastanów się czy powinny być w klasie bazowej.
+   * Zdefiniuj pola jak masa i rozmiar. Zastanów się, czy powinny być w klasie bazowej.
    * Dodaj możliwość posiadania przez planetę księżyców. W tym celu dodaj pole, które jest kolekcją i dodaj je do konstruktora.
    * Stwórz mutowalną, następnie niemutowalną wersję.
    * Stwórz klasę `StellarSystem`, która powinna mieć możliwość posiadania planet.
@@ -126,7 +126,7 @@ Aby znaleźć odpowiedź na zadanie należy wejść na odpowiadającą mu scię�
      * 0:  — — — — —
   
    * Stwórz klasę `HexNumberConverter`, która zmienia arabską liczbę na heksadecymalną. Skorzystaj z metody `Integer.toHexString`.
-   * Stwórz klase `NumberConverterFactory`, która posiada statyczną metodę `createConverter`, która jako parametr przyjmuje łańcuch znaków.
+   * Stwórz klasę `NumberConverterFactory`, która posiada statyczną metodę `createConverter`, która jako parametr przyjmuje łańcuch znaków.
    Jeżeli zostanie podany do niej łańcuch *"hex"* powinna wrócić implementację `HexNumberConverter`,
    a jeżeli *"morse"*, to `MorseNumberConverter`. Jeżeli zostanie podany inny łańcuch, to
    powinna zostać zwrócona implementacja `NumberConverter`, która zwraca ten sam łańcuch `("test" -> "test")`.
@@ -292,7 +292,7 @@ na pustej liście rzuć wyjątek `IllegalStateException`.
 ### Wyjątki
 
 1. * Napisz metodę `checkNull` rzucającą wyjątek `NullPointerException`, gdy argument jest równy `null`.
-   * Napisz następnie metodę `checkSize` sprawdzającą czy podany łańcuch znaków ma długość dłuższą lub równą od 2 znaków i krótszą lub równą od 15.
+   * Napisz następnie metodę `checkSize` sprawdzającą, czy podany łańcuch znaków ma długość dłuższą lub równą od 2 znaków i krótszą lub równą od 15.
      Jeżeli rozmiar jest nieprawidłowy to zgłoś wyjątek `IllegalArgumentException` z wiadomością 
      *"Tekst musi mieć od 2 do 15 znaków, a ma X znaków"*, gdzie X to rzeczywisty rozmiar tekstu.
    * Dodaj metodę `validate`, przyjmującą łańcuch znaków i zwracającą `boolean`. Ta metoda powinna wywołać metody
@@ -302,7 +302,7 @@ na pustej liście rzuć wyjątek `IllegalStateException`.
    * Napisz metodę `main` w której przetestujesz jak zachowuje się metoda `validate` dla prawidłowych
      wartości, jak *"Test"* oraz nieprawidłowych jak `null` lub *"x"* albo *"xxxxxxxxxxxxxxxxx"*.
        
-2. Napisz metodę `tryParse` parsująca liczbę ze łańcucha znaków, używajac `Integer.parse`. W przypadku nieudanej konwersji rzuć wyjątek `IllegalArgumentException` podając stary wyjątek jako parametr oraz przekaż wiadomość "Nieprawidłowa liczba".
+2. Napisz metodę `tryParse` parsująca liczbę z łańcucha znaków, używając `Integer.parse`. W przypadku nieudanej konwersji rzuć wyjątek `IllegalArgumentException` podając stary wyjątek jako parametr oraz przekaż wiadomość "Nieprawidłowa liczba".
 3. Napisz własny wyjątek `OddSizeException`. Zdefiniuj dla niego wszystkie konstruktory z klasy bazowej.
 Napisz metodę `checkList` wyrzucającą go, jeżeli liczba elementów jest nieparzysta.
 4. Stwórz kalkulator bezpiecznie wczytujący liczby i dodającą je listy.
@@ -336,8 +336,8 @@ Napisz metodę `checkList` wyrzucającą go, jeżeli liczba elementów jest niep
      Klasa w konstruktorze musi otrzymać listę zawierająca `DayOfWeek` o nazwie `daysWithExtendedWorkingHours`
      i zapisać je jako pole.
    * Stwórz metodę `String getOfficeWorkingHours(DayOfWeek day)` zwracającą czas pracy urzędu:
-      * *8-15* jeżeli jest to normalny dzień
-      * *8-17* jeżeli jest to dzień z rozszerzonymi godzinami pracy
+      * *8-15* jeżeli jest to normalny dzień.
+      * *8-17* jeżeli jest to dzień z rozszerzonymi godzinami pracy.
       * *zamknięte* jeżeli jest to weekend.
       
 ### Pliki
@@ -351,17 +351,17 @@ nadpisuje go wpisując linie w odwrotnej kolejności.
 *(Dodatkowo)* Napisz program, który nadpisuje linie w losowy sposób (losuje kolejność).
 
 3. Wczytaj plik `osoby` zawierający numery PESEL i nazwiska oraz imiona, podzielone znakiem `;`, a następnie `adresy`
-zawierający numery PESEL i adresy zamieszkania podzielone znakiem `;`. Połącz dane z obydwóch plików i wyświetl dla wszystich osób
+zawierający numery PESEL i adresy podzielone znakiem `;`. Połącz dane z obydwóch plików i wyświetl dla wszystkich osób
 dane w formacie `PESEL, imię, nazwisko, adres`. Jeżeli dla danej osoby nie istnieje linia w pliku `adresy.txt` to wyświetl `???`. 
 
 ### Wątki
 
 1. Stwórz nowy wątek wyświetlający napis `Witaj z innego wątku!` co 10 sekund oraz dodaj pętlę
-w głównym wątku wyświetljącą `Witaj z głownego wątku!` co 20 sekund. 
+w głównym wątku wyświetlającą `Witaj z głownego wątku!` co 20 sekund. 
 
-2. Stwórz klasę implementującą interfejs `Runnable`, która jako parametr otrzyma liczbę. Zadaniem obieku tej
-klasy będzie wyświetlenie liczby razem z z nazwą watku, a następnie odczekanie 1 sekundy i zmniejszenie wartości
-licznika o `1`, a natępnie powtórzenie operacji aż do osiągnięcia `0`. Innymi słowy należe odliczyć od `n` do `0`.
+2. Stwórz klasę implementującą interfejs `Runnable`, która jako parametr otrzyma liczbę. Zadaniem obiektu tej
+klasy będzie wyświetlenie liczby razem z nazwą wątku, a następnie odczekanie 1 sekundy i zmniejszenie wartości
+licznika o `1`, a następnie powtórzenie operacji aż do osiągnięcia `0`. Innymi słowami należy odliczyć od `n` do `0`.
 
 3. Napraw aplikację banks, tak by suma stanów kont była zawsze równa 2000.
 
@@ -375,7 +375,7 @@ Zaimplementuj wszystkie metody w klasach `Matches`, `Find`, `Replace`, `Split` o
 
 1. Stwórz aplikację wczytującą liczbę od użytkownika i obliczającą silnie. Aplikacja powinna być odporna na przekraczanie zakresu.
 
-2. Stwórz aplikację wczytującą dowolną liczbę ułamkową oraz liczbę całkowitą, następnie zaookrągl liczbę ułamkową do precyzji przekazanej
+2. Stwórz aplikację wczytującą dowolną liczbę ułamkową oraz liczbę całkowitą, następnie zaokrąglij liczbę ułamkową do precyzji przekazanej
 jako drugi argument i wyświetl.
 
 ### Strumienie
@@ -389,11 +389,11 @@ jako drugi argument i wyświetl.
 * Zwróć listę unikalnych wartości wieku użytkowników.
 * Wyszukaj pierwszego użytkownika po podanym adresie email.
 * Zwróć listę imion i nazwisk (połączonych jako jeden łańcuch) użytkowników z literami zamienionymi na duże.
-* Zwróc wszystkich użytkowników starszych niż wiek podany jako parametr.
+* Zwróć wszystkich użytkowników starszych niż wiek podany jako parametr.
 * Zwróć imiona wszystkich użytkowników podzielone przecinkami ako jeden łańcuch znaków.
 * Zwróć listę wszystkich użytkowników limitowaną do ilości podanej jako parametr.
 * Zwróć mapę użytkowników pogrupowanych według wieku.
 * Zwróć mapę wszystkich użytkowników pogrupowanych według domeny ich emaili (domena to adres po @).
 * Zwróć listę tytułów wszystkich maili wszystkich użytkowników korzystając z metody **repository.getMessageTitles**.
-* Zróć listę łańcuchów znaków zawierającą email oraz tytuł wiadomości, na przykład: *'email@gmail.com - Promocja!'* ale tylko jeżeli domena emaila zgadza się z podaną w parametrze.
-  Dla domen różych od parametru, zróć pojedyńczą wartość: *'email@wp.pl - Brak wiadomości'*.
+* Zwróć listę łańcuchów znaków zawierającą email oraz tytuł wiadomości, na przykład: *'email@gmail.com - Promocja!'* ale tylko jeżeli domena emaila zgadza się z podaną w parametrze.
+  Dla domen różych od parametru, zróć pojedynczą wartość: *'email@wp.pl - Brak wiadomości'*.
